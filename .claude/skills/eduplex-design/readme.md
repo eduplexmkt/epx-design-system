@@ -1,6 +1,6 @@
 # 에듀플렉스 디자인 시스템
 
-The design system behind **에듀플렉스 (Eduplex) marketing**, published as `@eduplexmkt/mkt-design-system`. Brand blue `#0054A7`, point yellow `#FFF100`, Pretendard type, a 359-icon set, and one product surface — the documentation site. This project is a browser-native recreation of it: real tokens, real component geometry, real icons, the real logo.
+The design system behind **에듀플렉스 (Eduplex) marketing**, published as `@eduplexmkt/mkt-design-system`. Brand blue `#0054A7`, point yellow `#FFF100`, Pretendard type, a 355-icon set, and one product surface — the documentation site. This project is a browser-native recreation of it: real tokens, real component geometry, real icons, the real logo.
 
 It is a rebrand-in-progress of an inherited system, so some upstream naming still shows in file paths and the UI kit folder. Lineage, the full list of source files read, the monorepo shape, rebrand status and the unbuilt component families all live in **[`guidelines/source-provenance.md`](guidelines/source-provenance.md)** — read that before syncing from the repository.
 
@@ -39,7 +39,7 @@ Note: this is the inherited engineering tone. 에듀플렉스 marketing copy has
 
 ## Visual foundations
 
-**Color.** One brand hue — `#0054A7` (`atomic.blue.50`, a deep navy since the 2026-09 rebrand) — and it means "action or selection", nothing else. Everything structural comes from a single cool-neutral ramp (`#0F0F10` → `#F7F7F8`). Below the atomic scales, semantic tokens are the only permitted API: `primary.*`, `label.*` (six text tiers), `background.*`, `line.*`, `fill.*`, `status.*`, `accent.*`, `inverse.*`, `material.dimmer`. Twelve accent hues exist in two forms — saturated `accent.background` for art, darkened `accent.foreground` for text — and mixing the two up is the most common misuse. Yellow is the newest and the trickiest: its background value `#FFF100` is pure and needs dark text on it, while its foreground value is the near-olive `#665F00`. Dark mode is the same token names with different values under `[data-theme="dark"]`; light and dark are peers, not a theme and a variant.
+**Color.** One brand hue — `#0054A7` (`atomic.blue.50`, a deep navy since the 2026-09 rebrand) — and it means "action or selection", nothing else. Everything structural comes from a single cool-neutral ramp (`#0F0F10` → `#F7F7F8`). Below the atomic scales, semantic tokens are the only permitted API: `primary.*`, `label.*` (six text tiers), `background.*`, `line.*`, `fill.*`, `status.*`, `accent.*`, `inverse.*`, `material.dimmer`. Accent hues exist in two forms — saturated `accent.background` for art (eight hues: redOrange, lime, cyan, lightBlue, violet, purple, pink, yellow) and darkened `accent.foreground` for text (twelve, adding red, orange, green and blue) — and mixing the two up is the most common misuse. Reaching for `accent.background.red` is the usual trip-up: it does not exist. Yellow is the newest and the trickiest: its background value `#FFF100` is pure and needs dark text on it, while its foreground value is the near-olive `#665F00`. Dark mode is the same token names with different values under `[data-theme="dark"]`; light and dark are peers, not a theme and a variant.
 
 **Transparency is structural, not decorative.** Most greys in the system are *not* solid: `label.neutral` is coolNeutral.22 at 88%, `line.normal.neutral` is coolNeutral.50 at 16%, `fill.normal` is coolNeutral.50 at 8%. The opacity scale (5, 8, 12, 16, 22, 28, 35, 43, 52, 61, 74, 88, 97) is a first-class token set. This is why components layer cleanly over imagery.
 
@@ -78,9 +78,9 @@ Inner content areas are not covers: they return to a neutral surface and the que
 
 ## Iconography
 
-- **One system, no substitutes.** The icon package ships **359** React icon components, generated from Figma by a sync workflow (`.github/workflows/figma-icon-sync.yml`) — manual edits get overwritten. There is no icon font, no sprite sheet and no PNG icons anywhere in the repository.
+- **One system, no substitutes.** The icon package ships **355** React icon components, generated from Figma by a sync workflow (`.github/workflows/figma-icon-sync.yml`) — manual edits get overwritten. There is no icon font, no sprite sheet and no PNG icons anywhere in the repository.
 - **Geometry.** Every icon is a 24×24 `viewBox`, `fill="none"` on the root, one or more `<path fill="currentColor">`, sized with `width="1em" height="1em"` so the glyph follows `font-size`. Strokes are drawn as filled outlines (no `stroke` attribute), with a consistent ~1.8px optical weight and rounded joins. Most icons are declared `속성: Outlined`; a `-fill` twin exists for many (`icon-bell` / `icon-bell-fill`), and `-color` variants (`icon-agent-color`, `icon-blank-color`) are multi-hue illustrations.
-- **In this project.** All 354 convertible icons were extracted from their `.tsx` sources into real SVG files in `assets/icons/`, with `assets/icons/index.md` listing every name, its Korean description and its keywords — read that index to find an icon rather than guessing a filename. **Not a substitution** — same path data, same source. Every path is `fill="currentColor"`, so a parent's `color` tints the icon; `components/foundation/Icon.jsx` also tints via a CSS mask. Only `logo-instagram-color` is missing: it embeds a raster image through a pattern and does not convert cleanly.
+- **In this project.** All 354 convertible icons were extracted from their `.tsx` sources into real SVG files in `assets/icons/`, with `assets/icons/index.md` listing every name, its Korean description and its keywords — read that index to find an icon rather than guessing a filename. **Not a substitution** — same path data, same source. The monochrome icons are all `fill="currentColor"`, so a parent's `color` tints them; the eleven `*-color` icons (`agent-color`, `blank-color`, the nine `logo-*-color` brand marks) carry fixed fills and ignore it. **Inline the markup, never link to the file** — `components/foundation/Icon.jsx` takes it as `markup`, because a `url(...)` reference dies in a standalone HTML file and a mask would flatten the color icons. Only `logo-instagram-color` is missing: it embeds a raster image through a pattern and does not convert cleanly.
 - **Sizing in context** (from component source): 24px for icon-only large buttons and bottom navigation, 22px for GNB actions, 20px large button leading / section message / toast / field affordances, 18px medium buttons, 16px small buttons and text buttons, 14px chips and badges, 12px xsmall chips.
 - **Emoji are never used as icons.** Unicode symbols appear only as literal content (`⌘K`).
 - **Logo:** the 에듀플렉스 wordmark + four-point diamond mark, supplied by the user and stored in `assets/logo/` (see its README). **Light backgrounds use `eduplex-main.svg` (Main Color); dark and brand-color backgrounds use `eduplex-white-point.svg` (White&Point Color)** — that pairing drives the UI kit, template and thumbnail. All-black and all-white versions remain for single-ink output only. The uploaded SVGs arrived with empty `<defs>`, so the two colors were inferred from the token set — Main `#0054A7` (`primary.normal`), Point `#FFF100` (`accent.background.yellow`); confirm against the brand guide. Nothing was drawn or reconstructed. The upstream mark exists only as a React component (`docs/src/assets/logo.tsx`) and was not copied.
@@ -94,8 +94,7 @@ Root files:
 - `tokens/` — `fonts.css`, `colors.css`, `typography.css`, `spacing.css`, `radius.css`, `elevation.css`, `motion.css`, `base.css`
 - `assets/logo/` — 4 에듀플렉스 logo variants + usage README
 - `assets/icons/` — 354 SVG icons plus `index.md`, the searchable name/description/keyword table
-- `guidelines/` — 21 foundation specimen cards (Colors, Type, Spacing, Brand)
-- `thumbnail.html` — homepage tile
+- `guidelines/` — 23 foundation specimen cards (Colors, Type, Spacing, Brand)
 - `SKILL.md` — Agent Skill wrapper (`eduplex-design`)
 - `github.md` — source repository association
 - `guidelines/source-provenance.md` — lineage, sources read, rebrand status, unbuilt families
@@ -106,8 +105,8 @@ Root files:
 - `components/layout/` — **FlexBox**, **Grid**, **GridItem**
 - `components/actions/` — **Button**, **IconButton**, **TextButton**, **Chip**
 - `components/selection-and-input/` — **TextField**, **TextArea**, **SearchField**, **Select**, **Checkbox**, **RadioGroup**, **Switch**, **SegmentedControl**, **Label**, **Form** (FormField / FormLabel / FormControl / FormMessage / FormErrorMessage), **Slider**, **Stepper**
-- `components/contents/` — **Card**, **ContentBadge**, **Avatar**, **Divider**, **Skeleton**
-- `components/feedback/` — **SectionMessage**, **Toast**, **Tooltip**
+- `components/contents/` — **Card**, **Thumbnail**, **ContentBadge**, **Avatar**, **Divider**, **Skeleton**, **Accordion**, **Table**
+- `components/feedback/` — **SectionMessage**, **Toast**, **Tooltip**, **Modal**, **ProgressIndicator**, **ProgressStepIndicator**
 - `components/navigations/` — **Tab**, **TopNavigation**, **BottomNavigation**
 
 Each directory holds `<Name>.jsx`, `<Name>.d.ts`, `<Name>.prompt.md` and one `@dsCard` HTML.
