@@ -1,0 +1,9 @@
+/* Pretendard Variable, self-hosted (user-supplied binary in assets/fonts/).
+   The variable font covers the full 400–700 range the token scale uses. The
+   jsDelivr dynamic-subset stylesheets the wds README prescribes are kept as a
+   fallback for 'Pretendard JP' glyphs the variable file lacks.
+   @import must precede @font-face per the CSS spec. */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-jp-dynamic-subset.min.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+@font-face{font-family:"Pretendard Variable";font-style:normal;font-weight:45 920;font-display:swap;src:url("../assets/fonts/PretendardVariable.woff2") format("woff2-variations")}
+:root{--font-family-core:"Pretendard Variable","Pretendard JP","Pretendard",-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue","Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;--font-family-mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;--font-weight-regular:400;--font-weight-medium:500;--font-weight-bold:600;--font-weight-display-bold:700}

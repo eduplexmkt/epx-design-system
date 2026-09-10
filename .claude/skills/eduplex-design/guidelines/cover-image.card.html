@@ -1,0 +1,26 @@
+<!-- @dsCard group="Brand" viewport="700x300" name="Cover image rule" subtitle="메인·커버·표지 이미지의 배경색은 항상 메인 컬러 #0054A7" -->
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><title>Cover image rule</title><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:20px;background:var(--semantic-background-normal-normal);font-family:var(--font-family-core)}
+.row{display:flex;gap:16px}
+.f{flex:1 1 0;display:flex;flex-direction:column;gap:8px}
+.cover{aspect-ratio:16/9;border-radius:12px;display:flex;flex-direction:column;justify-content:space-between;padding:20px;box-sizing:border-box}
+.ok{background:#0054A7}
+.no{background:var(--semantic-background-normal-alternative);border:1px solid var(--semantic-line-normal-normal)}
+.cover img{height:20px;display:block}
+.h{font-size:20px;line-height:26px;font-weight:600;letter-spacing:-.0194em;color:var(--semantic-static-white)}
+.h.d{color:var(--semantic-label-normal)}
+.dot{width:8px;height:8px;border-radius:50%;background:#FFF100;margin-bottom:8px}
+.n{font-size:11px;line-height:14px;letter-spacing:.0311em;font-weight:500}
+.n.y{color:var(--semantic-primary-normal)}
+.n.x{color:var(--semantic-status-negative)}</style></head>
+<body><div class="row">
+<div class="f">
+<div class="cover ok"><img src="../assets/logo/eduplex-white-point.svg" alt="에듀플렉스"><div><div class="dot"></div><div class="h">에듀플렉스는 답이 있습니다.</div></div></div>
+<div class="n y">O — 배경 #0054A7 · White&amp;Point 로고 · 흰 텍스트 · 포인트 옐로우 액센트</div>
+</div>
+<div class="f">
+<div class="cover no"><img src="../assets/logo/eduplex-main.svg" alt="에듀플렉스"><div class="h d">에듀플렉스는 답이 있습니다.</div></div>
+<div class="n x">X — 커버에 중성 배경, 틴트, 그라디언트 사용 금지</div>
+</div>
+</div></body></html>

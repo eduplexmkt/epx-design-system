@@ -1,0 +1,9 @@
+/* Spacing scale (packages/wds-theme/src/theme/spacing) — not a strict 4px grid:
+   0.5, 1, 2, 6, 10 and 14 exist because component paddings need them
+   (Button medium is 9px 20px, Chip medium 7px 11px). Use the token, not a round number. */
+:root{--spacing-0:0px;--spacing-0-5:0.5px;--spacing-1:1px;--spacing-2:2px;--spacing-4:4px;--spacing-6:6px;--spacing-8:8px;--spacing-10:10px;--spacing-12:12px;--spacing-14:14px;--spacing-16:16px;--spacing-20:20px;--spacing-24:24px;--spacing-32:32px;--spacing-40:40px;--spacing-48:48px;--spacing-56:56px;--spacing-64:64px;--spacing-72:72px;--spacing-80:80px;
+/* breakpoints (min-width, mobile-first: xs → xl) */
+--breakpoint-xs:0px/* @kind other */;--breakpoint-sm:768px/* @kind other */;--breakpoint-md:992px/* @kind other */;--breakpoint-lg:1200px/* @kind other */;--breakpoint-xl:1600px/* @kind other */;
+/* z-index */
+--z-index-modal:1300/* @kind other */
+}

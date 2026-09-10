@@ -1,0 +1,42 @@
+<!-- @dsCard group="Components" viewport="700x330" name="Contents" subtitle="Card, ContentBadge, Avatar, Divider, Skeleton" -->
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><title>Contents</title><link rel="stylesheet" href="../../styles.css">
+<script>window.__WDS_ICON_BASE__='../../assets/icons'</script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:20px;background:var(--semantic-background-normal-normal)}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:14px}.lbl{font-size:11px;line-height:14px;letter-spacing:.0311em;font-weight:500;color:var(--semantic-label-assistive)}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { Card, ContentBadge, Avatar, Divider, Skeleton, Icon } = window.MontageDesignSystem_4afdc8;
+function Demo(){
+  return (
+    <div className="col">
+      <div className="row" style={{gap:12}}>
+        <ContentBadge accentColor="blue">전체</ContentBadge>
+        <ContentBadge accentColor="red" variant="outlined">신청임박</ContentBadge>
+        <ContentBadge accentColor="violet" size="medium">추천</ContentBadge>
+        <ContentBadge color="neutral">최근 7일</ContentBadge>
+        <ContentBadge size="xsmall" accentColor="green">학부모</ContentBadge>
+        <Divider vertical size={24} color="var(--semantic-line-normal-normal)" />
+        <Avatar size="xsmall" fallback="에" />
+        <Avatar size="small" fallback="김" />
+        <Avatar size="medium" variant="company" fallback="E" />
+        <Avatar size="large" variant="company" fallback="에" />
+      </div>
+      <Divider />
+      <div className="row" style={{gap:16,alignItems:'flex-start'}}>
+        <Card width={200} title="개별지도 노하우" caption="강사명 · 교육기간" badges={<ContentBadge size="xsmall" accentColor="blue">전체</ContentBadge>} />
+        <Card width={170} platform="mobile" title="루트교육" caption="강사명 · 교육기간" overlay="D-3" />
+        <div className="col" style={{width:180,gap:8}}>
+          <Skeleton variant="rectangle" width="100%" height={120} />
+          <Skeleton variant="text" width="80%" />
+          <Skeleton variant="text" width="55%" />
+        </div>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body></html>

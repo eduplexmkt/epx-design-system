@@ -1,0 +1,10 @@
+/* Radii are per-component and size-dependent in Montage — there is no single
+   "card radius". These are the values components actually use. */
+:root{--radius-5:5px;--radius-6:6px;--radius-8:8px;--radius-10:10px;--radius-12:12px;--radius-14:14px;--radius-full:9999px;
+/* component-scoped radii, as authored in wds */
+--radius-button-small:8px;--radius-button-medium:10px;--radius-button-large:12px;
+--radius-chip-xsmall:6px;--radius-chip-small:8px;--radius-chip-medium:8px;--radius-chip-large:10px;
+--radius-text-field:12px;--radius-card-thumbnail:12px;--radius-toast:12px;--radius-section-message:12px;
+--radius-tooltip-small:6px;--radius-tooltip-medium:8px;
+--radius-checkbox:5px;--radius-switch-medium:100px;--radius-switch-small:75px;
+--radius-avatar-xsmall:6px;--radius-avatar-small:8px;--radius-avatar-medium:10px;--radius-avatar-large:12px;--radius-avatar-xlarge:14px}

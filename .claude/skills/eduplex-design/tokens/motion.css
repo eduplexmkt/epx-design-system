@@ -1,0 +1,13 @@
+/* Motion — Montage animates little and briefly. Two easings do almost all the
+   work: plain `ease` for color/opacity, and the material standard curve for
+   anything that moves (switch thumb, segmented-control thumb). */
+:root{--duration-fast:0.15s/* @kind other */;--duration-normal:0.2s/* @kind other */;--duration-slow:0.3s/* @kind other */;
+--easing-standard:cubic-bezier(0.4,0,0.2,1)/* @kind other */;--easing-default:ease/* @kind other */;
+--transition-color:color var(--duration-normal) var(--easing-default),background-color var(--duration-normal) var(--easing-default),box-shadow var(--duration-normal) var(--easing-default)/* @kind other */;
+--transition-motion:transform 200ms var(--easing-standard),margin-left 200ms var(--easing-standard)/* @kind other */;
+/* interaction overlay opacities (WithInteraction). This system uses the source's
+   "strong" pair as its default — 5%/12% read as no change at all on brand blue. */
+--interaction-hover:0.075/* @kind other */;--interaction-active:0.18/* @kind other */;
+--interaction-hover-normal:0.05/* @kind other */;--interaction-hover-light:0.0375/* @kind other */;--interaction-hover-strong:0.075/* @kind other */;
+--interaction-active-normal:0.12/* @kind other */;--interaction-active-light:0.09/* @kind other */;--interaction-active-strong:0.18/* @kind other */
+}

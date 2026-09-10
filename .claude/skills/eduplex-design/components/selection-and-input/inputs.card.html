@@ -1,0 +1,44 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Selection & input" subtitle="TextField, SearchField, Select, Checkbox, Radio, Switch, SegmentedControl" -->
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><title>Selection & input</title><link rel="stylesheet" href="../../styles.css">
+<script>window.__WDS_ICON_BASE__='../../assets/icons'</script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:20px;background:var(--semantic-background-normal-normal)}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:14px}.lbl{font-size:11px;line-height:14px;letter-spacing:.0311em;font-weight:500;color:var(--semantic-label-assistive)}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { TextField, SearchField, Select, Checkbox, RadioGroup, Switch, SegmentedControl, Icon } = window.MontageDesignSystem_4afdc8;
+function Demo(){
+  const [seg,setSeg]=React.useState('reco');
+  const [radio,setRadio]=React.useState('all');
+  const [on,setOn]=React.useState(true);
+  return (
+    <div className="col">
+      <div className="row">
+        <TextField placeholder="이메일을 입력해 주세요" width={240} />
+        <TextField defaultValue="wrong@" invalid width={180} />
+        <TextField placeholder="비활성" disabled width={140} />
+      </div>
+      <div className="row">
+        <SearchField leadingContent={<Icon name="search" size={20} />} placeholder="에듀플렉스 지점 검색" width={280} />
+        <Select width={180} placeholder="지역" options={[{value:'seoul',label:'서울'},{value:'busan',label:'부산'}]} />
+      </div>
+      <div className="row" style={{gap:20}}>
+        <Checkbox checked label="전체 동의" />
+        <Checkbox indeterminate size="small" label="일부 선택" />
+        <Checkbox label="선택 안 함" />
+        <RadioGroup direction="row" value={radio} onChange={setRadio} options={[{value:'all',label:'전체'},{value:'new',label:'직영'}]} />
+        <Switch checked={on} onChange={()=>setOn(!on)} />
+        <Switch size="small" />
+      </div>
+      <div className="row" style={{gap:12}}>
+        <div style={{width:300}}><SegmentedControl value={seg} onChange={setSeg} items={[{value:'reco',label:'추천'},{value:'new',label:'최신'},{value:'near',label:'가까운'}]} /></div>
+        <div style={{width:220}}><SegmentedControl size="small" variant="outlined" value={seg} onChange={setSeg} items={[{value:'reco',label:'추천'},{value:'new',label:'최신'}]} /></div>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body></html>

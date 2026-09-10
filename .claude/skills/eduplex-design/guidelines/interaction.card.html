@@ -1,0 +1,16 @@
+<!-- @dsCard group="Brand" viewport="700x160" name="Interaction states" subtitle="Hover and press are a semantic.label.normal overlay at 7.5% / 18% — the base color never changes" -->
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><title>Interaction</title><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:20px;background:var(--semantic-background-normal-normal);color:var(--semantic-label-normal)}
+.row{display:flex;gap:10px;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:10px}
+.sw{display:flex;flex-direction:column;gap:6px;min-width:96px}
+.chip{height:52px;border-radius:8px;box-shadow:inset 0 0 0 1px var(--semantic-line-normal-alternative)}
+.n{font-size:11px;line-height:14px;letter-spacing:.0311em;font-weight:500;color:var(--semantic-label-normal)}
+.v{font-size:11px;line-height:14px;letter-spacing:.0311em;color:var(--semantic-label-assistive);font-family:var(--font-family-mono)}
+.b{display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;width:150px;padding:9px 20px;border-radius:10px;background:var(--semantic-primary-normal);color:#fff;font-size:15px;line-height:22px;font-weight:600}
+.ov{position:absolute;inset:0;background:var(--semantic-label-normal)}</style></head><body><div class="row" style="gap:16px">
+<div class="sw" style="min-width:150px"><div class="b">신청하기</div><div class="n">rest</div><div class="v">opacity 0</div></div>
+<div class="sw" style="min-width:150px"><div class="b">신청하기<span class="ov" style="opacity:.075"></span></div><div class="n">hover</div><div class="v">label.normal 7.5%</div></div>
+<div class="sw" style="min-width:150px"><div class="b">신청하기<span class="ov" style="opacity:.18"></span></div><div class="n">press</div><div class="v">label.normal 18%</div></div>
+<div class="sw" style="min-width:150px"><div class="b" style="background:var(--semantic-interaction-disable);color:var(--semantic-label-assistive)">신청하기</div><div class="n">disabled</div><div class="v">interaction.disable</div></div>
+</div></body></html>

@@ -1,0 +1,9 @@
+@import url("../../tokens/colors.css");
+@import url("../../tokens/typography.css");
+@import url("../../tokens/spacing.css");
+@import url("../../tokens/radius.css");
+@import url("../../tokens/elevation.css");
+@import url("../../tokens/motion.css");
+@import url("../../tokens/base.css");
+@font-face{font-family:"Pretendard Variable";font-style:normal;font-weight:45 920;font-display:swap;src:url("../../assets/fonts/PretendardVariable.woff2") format("woff2-variations")}
+:root{--font-family-core:"Pretendard Variable",-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;--font-family-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--font-weight-regular:400;--font-weight-medium:500;--font-weight-bold:600;--font-weight-display-bold:700}

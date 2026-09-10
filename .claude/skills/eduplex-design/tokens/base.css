@@ -1,0 +1,9 @@
+/* Base layer — the little that Montage's global.css establishes. */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:var(--font-family-core);font-size:var(--font-size-body1);line-height:var(--line-height-body1);letter-spacing:var(--letter-spacing-body1);font-weight:var(--font-weight-regular);color:var(--semantic-label-normal);background-color:var(--semantic-background-normal-normal);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,h4,h5,h6,p,figure{margin:0}
+button{font-family:inherit;border:none;background:none;padding:0;color:inherit}
+a{color:var(--semantic-primary-normal);text-decoration:none}
+a:hover{color:var(--semantic-primary-strong);text-decoration:underline}
+:focus-visible{outline:2px solid rgba(var(--semantic-primary-normal-rgb),0.43);outline-offset:2px}
+svg{display:block}

@@ -1,0 +1,47 @@
+/* Montage type scale — 19 variants, values verbatim from
+   packages/wds/src/components/typography/style.ts. Sizes are rem (1rem = 16px);
+   letter-spacing is em and tightens as size grows. Weights: regular 400,
+   medium 500, bold 600 — except display/title variants, whose bold is 700. */
+:root{
+--font-size-display1:3.5rem;--line-height-display1:4.5rem;--letter-spacing-display1:-0.0319em;
+--font-size-display2:2.5rem;--line-height-display2:3.25rem;--letter-spacing-display2:-0.0282em;
+--font-size-display3:2.25rem;--line-height-display3:3rem;--letter-spacing-display3:-0.027em;
+--font-size-title1:2rem;--line-height-title1:2.75rem;--letter-spacing-title1:-0.0253em;
+--font-size-title2:1.75rem;--line-height-title2:2.375rem;--letter-spacing-title2:-0.0236em;
+--font-size-title3:1.5rem;--line-height-title3:2rem;--letter-spacing-title3:-0.023em;
+--font-size-heading1:1.375rem;--line-height-heading1:1.875rem;--letter-spacing-heading1:-0.0194em;
+--font-size-heading2:1.25rem;--line-height-heading2:1.75rem;--letter-spacing-heading2:-0.012em;
+--font-size-headline1:1.125rem;--line-height-headline1:1.625rem;--letter-spacing-headline1:-0.002em;
+--font-size-headline2:1.0625rem;--line-height-headline2:1.5rem;--letter-spacing-headline2:0em;
+--font-size-body1:1rem;--line-height-body1:1.5rem;--line-height-body1-reading:1.625rem;--letter-spacing-body1:0.0057em;
+--font-size-body2:0.9375rem;--line-height-body2:1.375rem;--line-height-body2-reading:1.5rem;--letter-spacing-body2:0.0096em;
+--font-size-label1:0.875rem;--line-height-label1:1.25rem;--line-height-label1-reading:1.375rem;--letter-spacing-label1:0.0145em;
+--font-size-label2:0.8125rem;--line-height-label2:1.125rem;--letter-spacing-label2:0.0194em;
+--font-size-caption1:0.75rem;--line-height-caption1:1rem;--letter-spacing-caption1:0.0252em;
+--font-size-caption2:0.6875rem;--line-height-caption2:0.875rem;--letter-spacing-caption2:0.0311em;
+/* semantic type aliases */
+--text-hero:var(--font-size-display1);--text-page-title:var(--font-size-title1);--text-section-title:var(--font-size-heading2);--text-copy:var(--font-size-body1);--text-meta:var(--font-size-label2)
+}
+/* Ready-made variant classes. Every product surface in this design system uses
+   these instead of ad-hoc font-size declarations. */
+.wds-display1{font-size:var(--font-size-display1);line-height:var(--line-height-display1);letter-spacing:var(--letter-spacing-display1)}
+.wds-display2{font-size:var(--font-size-display2);line-height:var(--line-height-display2);letter-spacing:var(--letter-spacing-display2)}
+.wds-display3{font-size:var(--font-size-display3);line-height:var(--line-height-display3);letter-spacing:var(--letter-spacing-display3)}
+.wds-title1{font-size:var(--font-size-title1);line-height:var(--line-height-title1);letter-spacing:var(--letter-spacing-title1)}
+.wds-title2{font-size:var(--font-size-title2);line-height:var(--line-height-title2);letter-spacing:var(--letter-spacing-title2)}
+.wds-title3{font-size:var(--font-size-title3);line-height:var(--line-height-title3);letter-spacing:var(--letter-spacing-title3)}
+.wds-heading1{font-size:var(--font-size-heading1);line-height:var(--line-height-heading1);letter-spacing:var(--letter-spacing-heading1)}
+.wds-heading2{font-size:var(--font-size-heading2);line-height:var(--line-height-heading2);letter-spacing:var(--letter-spacing-heading2)}
+.wds-headline1{font-size:var(--font-size-headline1);line-height:var(--line-height-headline1);letter-spacing:var(--letter-spacing-headline1)}
+.wds-headline2{font-size:var(--font-size-headline2);line-height:var(--line-height-headline2);letter-spacing:var(--letter-spacing-headline2)}
+.wds-body1{font-size:var(--font-size-body1);line-height:var(--line-height-body1);letter-spacing:var(--letter-spacing-body1)}
+.wds-body1-reading{font-size:var(--font-size-body1);line-height:var(--line-height-body1-reading);letter-spacing:var(--letter-spacing-body1)}
+.wds-body2{font-size:var(--font-size-body2);line-height:var(--line-height-body2);letter-spacing:var(--letter-spacing-body2)}
+.wds-body2-reading{font-size:var(--font-size-body2);line-height:var(--line-height-body2-reading);letter-spacing:var(--letter-spacing-body2)}
+.wds-label1{font-size:var(--font-size-label1);line-height:var(--line-height-label1);letter-spacing:var(--letter-spacing-label1)}
+.wds-label1-reading{font-size:var(--font-size-label1);line-height:var(--line-height-label1-reading);letter-spacing:var(--letter-spacing-label1)}
+.wds-label2{font-size:var(--font-size-label2);line-height:var(--line-height-label2);letter-spacing:var(--letter-spacing-label2)}
+.wds-caption1{font-size:var(--font-size-caption1);line-height:var(--line-height-caption1);letter-spacing:var(--letter-spacing-caption1)}
+.wds-caption2{font-size:var(--font-size-caption2);line-height:var(--line-height-caption2);letter-spacing:var(--letter-spacing-caption2)}
+.wds-regular{font-weight:400}.wds-medium{font-weight:500}.wds-bold{font-weight:600}
+.wds-display1.wds-bold,.wds-display2.wds-bold,.wds-display3.wds-bold,.wds-title1.wds-bold,.wds-title2.wds-bold,.wds-title3.wds-bold{font-weight:700}

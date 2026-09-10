@@ -1,0 +1,12 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="Iconography" subtitle="27 of the 359 outlined 24px icons, copied from wds-icon" -->
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><title>Icons</title><link rel="stylesheet" href="../../styles.css">
+<style>body{margin:0;padding:20px;background:var(--semantic-background-normal-normal)}
+.grid{display:grid;grid-template-columns:repeat(13,1fr);gap:14px}
+.i{width:24px;height:24px;background-color:var(--semantic-label-normal);-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center}
+.p{background-color:var(--semantic-primary-normal)}</style></head>
+<body><div class="grid" id="g"></div>
+<script>
+const names=["chevron-left","chevron-right","chevron-up","chevron-down","arrow-right","search","close","check","plus","menu","filter","bell","home","person","setting","heart","star","bookmark","calendar","clock","share","mail","pencil","trash","circle-info"];
+document.getElementById('g').innerHTML=names.map((n,i)=>'<span class="i'+(i>19?' p':'')+'" title="'+n+'" style="-webkit-mask-image:url(../../assets/icons/'+n+'.svg);mask-image:url(../../assets/icons/'+n+'.svg)"></span>').join('');
+</script></body></html>

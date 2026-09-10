@@ -1,0 +1,88 @@
+/* Montage color tokens — verbatim from packages/wds-theme/src/theme.
+   Atomic scales are raw palette values; semantic tokens are the only layer
+   product UI should consume. Alpha values come from the theme's opacity scale
+   baked into 8-digit hex exactly as addHexOpacity() does at build time. */
+:root{
+/* atomic — common */
+--atomic-common-0:#000000;--atomic-common-100:#ffffff;
+/* atomic — blue (brand) */
+--atomic-blue-10:#001121;--atomic-blue-20:#002243;--atomic-blue-30:#003264;--atomic-blue-40:#004386;--atomic-blue-45:#004C96;--atomic-blue-50:#0054A7;--atomic-blue-55:#1A65B0;--atomic-blue-60:#3376B9;--atomic-blue-65:#4C87C1;--atomic-blue-70:#6698CA;--atomic-blue-80:#99BBDC;--atomic-blue-90:#CCDDED;--atomic-blue-95:#E6EEF6;--atomic-blue-99:#F7FAFC;
+/* atomic — coolNeutral */
+--atomic-coolNeutral-5:#0F0F10;--atomic-coolNeutral-7:#141415;--atomic-coolNeutral-10:#171719;--atomic-coolNeutral-15:#1B1C1E;--atomic-coolNeutral-17:#212225;--atomic-coolNeutral-20:#292A2D;--atomic-coolNeutral-22:#2E2F33;--atomic-coolNeutral-23:#333438;--atomic-coolNeutral-25:#37383C;--atomic-coolNeutral-30:#46474C;--atomic-coolNeutral-40:#5A5C63;--atomic-coolNeutral-50:#70737C;--atomic-coolNeutral-60:#878A93;--atomic-coolNeutral-70:#989BA2;--atomic-coolNeutral-80:#AEB0B6;--atomic-coolNeutral-90:#C2C4C8;--atomic-coolNeutral-95:#DBDCDF;--atomic-coolNeutral-96:#E1E2E4;--atomic-coolNeutral-97:#EAEBEC;--atomic-coolNeutral-98:#F4F4F5;--atomic-coolNeutral-99:#F7F7F8;
+/* atomic — neutral (shadow base) */
+--atomic-neutral-5:#0F0F0F;--atomic-neutral-10:#171717;--atomic-neutral-15:#1C1C1C;--atomic-neutral-20:#2A2A2A;--atomic-neutral-22:#303030;--atomic-neutral-30:#474747;--atomic-neutral-40:#5C5C5C;--atomic-neutral-50:#737373;--atomic-neutral-60:#8A8A8A;--atomic-neutral-70:#9B9B9B;--atomic-neutral-80:#B0B0B0;--atomic-neutral-90:#C4C4C4;--atomic-neutral-95:#DCDCDC;--atomic-neutral-99:#F7F7F7;
+/* atomic — status + accent hues */
+--atomic-red-40:#E52222;--atomic-red-50:#FF4242;--atomic-red-60:#FF6363;--atomic-red-95:#FEECEC;
+--atomic-redOrange-40:#C94A00;--atomic-redOrange-48:#F55A00;--atomic-redOrange-50:#FF5E00;--atomic-redOrange-60:#FF7B2E;
+--atomic-orange-39:#D17600;--atomic-orange-50:#FF9200;--atomic-orange-60:#FFA938;--atomic-orange-95:#FEF4E6;
+--atomic-lime-37:#429E00;--atomic-lime-50:#58CF04;--atomic-lime-60:#6BE016;
+--atomic-green-40:#009632;--atomic-green-50:#00BF40;--atomic-green-60:#1ED45A;--atomic-green-95:#D9FFE6;
+--atomic-cyan-40:#0098B2;--atomic-cyan-50:#00BDDE;--atomic-cyan-60:#28D0ED;
+--atomic-lightBlue-40:#008DCF;--atomic-lightBlue-50:#00AEFF;--atomic-lightBlue-60:#3DC2FF;
+--atomic-violet-45:#5B37ED;--atomic-violet-50:#6541F2;--atomic-violet-60:#7D5EF7;--atomic-violet-70:#9E86FC;
+--atomic-purple-40:#AD36E3;--atomic-purple-50:#CB59FF;--atomic-purple-60:#D478FF;
+--atomic-pink-46:#E846CD;--atomic-pink-50:#F553DA;--atomic-pink-60:#FA73E3;
+--atomic-yellow-10:#332F00;--atomic-yellow-20:#665F00;--atomic-yellow-30:#998E00;--atomic-yellow-40:#CCBE00;--atomic-yellow-45:#E6D600;--atomic-yellow-50:#FFF100;--atomic-yellow-55:#FFF21A;--atomic-yellow-60:#FFF44D;--atomic-yellow-65:#FFF566;--atomic-yellow-70:#FFF780;--atomic-yellow-80:#FFF999;--atomic-yellow-90:#FFFCCC;--atomic-yellow-95:#FFFDE6;--atomic-yellow-99:#FFFFF7;
+
+/* opacity scale */
+--opacity-0:0/* @kind other */;--opacity-5:0.05/* @kind other */;--opacity-8:0.08/* @kind other */;--opacity-12:0.12/* @kind other */;--opacity-16:0.16/* @kind other */;--opacity-22:0.22/* @kind other */;--opacity-28:0.28/* @kind other */;--opacity-35:0.35/* @kind other */;--opacity-43:0.43/* @kind other */;--opacity-52:0.52/* @kind other */;--opacity-61:0.61/* @kind other */;--opacity-74:0.74/* @kind other */;--opacity-88:0.88/* @kind other */;--opacity-97:0.97/* @kind other */;--opacity-100:1/* @kind other */;
+
+/* semantic — static */
+--semantic-static-white:#ffffff;--semantic-static-black:#000000;
+/* semantic — primary */
+--semantic-primary-normal:#0054A7;--semantic-primary-strong:#004386;--semantic-primary-heavy:#003264;
+--semantic-primary-normal-rgb:0,84,167/* @kind color */;
+/* semantic — label */
+--semantic-label-normal:#171719;--semantic-label-strong:#000000;--semantic-label-neutral:#2E2F33E0;--semantic-label-alternative:#37383C9C;--semantic-label-assistive:#37383C47;--semantic-label-disable:#37383C29;
+--semantic-label-normal-rgb:23,23,25/* @kind color */;
+/* semantic — background */
+--semantic-background-normal-normal:#ffffff;--semantic-background-normal-alternative:#F7F7F8;--semantic-background-elevated-normal:#ffffff;--semantic-background-elevated-alternative:#F7F7F8;--semantic-background-transparent-normal:#ffffff14;--semantic-background-transparent-alternative:#ffffff47;
+--semantic-background-elevated-normal-rgb:255,255,255/* @kind color */;
+--semantic-background-status-negative:#FF424214;--semantic-background-status-cautionary:#FF920014;--semantic-background-status-positive:#00BF4014;
+/* semantic — interaction */
+--semantic-interaction-inactive:#989BA2;--semantic-interaction-disable:#F4F4F5;
+/* semantic — line */
+--semantic-line-normal-normal:#70737C38;--semantic-line-normal-neutral:#70737C29;--semantic-line-normal-alternative:#70737C14;
+--semantic-line-solid-normal:#E1E2E4;--semantic-line-solid-neutral:#EAEBEC;--semantic-line-solid-alternative:#F4F4F5;
+--semantic-line-primary-normal:#0054A747;--semantic-line-primary-strong:#0054A76E;
+--semantic-line-status-negative-normal:#FF42426E;--semantic-line-status-negative-strong:#FF424285;--semantic-line-status-cautionary-normal:#FF92006E;--semantic-line-status-positive-normal:#00BF406E;
+/* semantic — status */
+--semantic-status-positive:#00BF40;--semantic-status-cautionary:#FF9200;--semantic-status-negative:#FF4242;
+--semantic-status-negative-rgb:255,66,66/* @kind color */;
+/* semantic — accent background */
+--semantic-accent-background-redOrange:#FF5E00;--semantic-accent-background-lime:#58CF04;--semantic-accent-background-cyan:#00BDDE;--semantic-accent-background-lightBlue:#00AEFF;--semantic-accent-background-violet:#6541F2;--semantic-accent-background-purple:#CB59FF;--semantic-accent-background-pink:#F553DA;--semantic-accent-background-yellow:#FFF100;
+/* semantic — accent foreground */
+--semantic-accent-foreground-red:#E52222;--semantic-accent-foreground-redOrange:#F55A00;--semantic-accent-foreground-orange:#D17600;--semantic-accent-foreground-lime:#429E00;--semantic-accent-foreground-green:#009632;--semantic-accent-foreground-cyan:#0098B2;--semantic-accent-foreground-lightBlue:#008DCF;--semantic-accent-foreground-blue:#004C96;--semantic-accent-foreground-violet:#5B37ED;--semantic-accent-foreground-purple:#AD36E3;--semantic-accent-foreground-pink:#E846CD;--semantic-accent-foreground-yellow:#665F00;
+/* semantic — inverse */
+--semantic-inverse-primary:#3376B9;--semantic-inverse-background:#1B1C1E;--semantic-inverse-label:#F7F7F8;
+--semantic-inverse-background-rgb:27,28,30/* @kind color */;--semantic-inverse-label-rgb:247,247,248/* @kind color */;
+/* semantic — fill */
+--semantic-fill-normal:#70737C14;--semantic-fill-strong:#70737C29;--semantic-fill-alternative:#70737C0D;
+/* semantic — material */
+--semantic-material-dimmer:#17171985;
+
+/* convenience aliases used across this design system's own docs + kits */
+--text-body:var(--semantic-label-normal);--text-muted:var(--semantic-label-alternative);--text-assistive:var(--semantic-label-assistive);--surface-page:var(--semantic-background-normal-normal);--surface-page-alt:var(--semantic-background-normal-alternative);--surface-card:var(--semantic-background-elevated-normal);--border-hairline:var(--semantic-line-normal-neutral);--brand:var(--semantic-primary-normal)
+}
+[data-theme="dark"]{
+--semantic-primary-normal:#3376B9;--semantic-primary-strong:#0054A7;--semantic-primary-heavy:#004386;
+--semantic-primary-normal-rgb:51,118,185/* @kind color */;
+--semantic-label-normal:#F7F7F8;--semantic-label-strong:#ffffff;--semantic-label-neutral:#C2C4C8E0;--semantic-label-alternative:#AEB0B69C;--semantic-label-assistive:#AEB0B647;--semantic-label-disable:#989BA229;
+--semantic-label-normal-rgb:247,247,248/* @kind color */;
+--semantic-background-normal-normal:#1B1C1E;--semantic-background-normal-alternative:#0F0F10;--semantic-background-elevated-normal:#212225;--semantic-background-elevated-alternative:#141415;--semantic-background-transparent-normal:#2122259C;--semantic-background-transparent-alternative:#2122259C;
+--semantic-background-elevated-normal-rgb:33,34,37/* @kind color */;
+--semantic-background-status-negative:#FF636314;--semantic-background-status-cautionary:#FFA93814;--semantic-background-status-positive:#1ED45A14;
+--semantic-interaction-inactive:#5A5C63;--semantic-interaction-disable:#2E2F33;
+--semantic-line-normal-normal:#70737C52;--semantic-line-normal-neutral:#70737C47;--semantic-line-normal-alternative:#70737C38;
+--semantic-line-solid-normal:#37383C;--semantic-line-solid-neutral:#333438;--semantic-line-solid-alternative:#2E2F33;
+--semantic-line-primary-normal:#3376B947;--semantic-line-primary-strong:#3376B96E;
+--semantic-line-status-negative-normal:#FF63636E;--semantic-line-status-negative-strong:#FF636385;--semantic-line-status-cautionary-normal:#FFA9386E;--semantic-line-status-positive-normal:#1ED45A6E;
+--semantic-status-positive:#1ED45A;--semantic-status-cautionary:#FFA938;--semantic-status-negative:#FF6363;
+--semantic-status-negative-rgb:255,99,99/* @kind color */;
+--semantic-accent-background-redOrange:#FF7B2E;--semantic-accent-background-lime:#6BE016;--semantic-accent-background-cyan:#28D0ED;--semantic-accent-background-lightBlue:#3DC2FF;--semantic-accent-background-violet:#7D5EF7;--semantic-accent-background-purple:#D478FF;--semantic-accent-background-pink:#FA73E3;--semantic-accent-background-yellow:#FFF44D;
+--semantic-accent-foreground-red:#FF6363;--semantic-accent-foreground-redOrange:#FF7B2E;--semantic-accent-foreground-orange:#FF9200;--semantic-accent-foreground-lime:#58CF04;--semantic-accent-foreground-green:#1ED45A;--semantic-accent-foreground-cyan:#00BDDE;--semantic-accent-foreground-lightBlue:#00AEFF;--semantic-accent-foreground-blue:#4C87C1;--semantic-accent-foreground-violet:#9E86FC;--semantic-accent-foreground-purple:#D478FF;--semantic-accent-foreground-pink:#FA73E3;--semantic-accent-foreground-yellow:#FFF780;
+--semantic-inverse-primary:#0054A7;--semantic-inverse-background:#ffffff;--semantic-inverse-label:#171719;
+--semantic-inverse-background-rgb:255,255,255/* @kind color */;--semantic-inverse-label-rgb:23,23,25/* @kind color */;
+--semantic-fill-normal:#70737C38;--semantic-fill-strong:#70737C47;--semantic-fill-alternative:#70737C1F;
+--semantic-material-dimmer:#171719BD
+}

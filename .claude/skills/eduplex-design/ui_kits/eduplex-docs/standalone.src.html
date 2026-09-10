@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에듀플렉스 디자인 시스템 — Documentation</title>
+<meta name="ext-resource-dependency" content="../../assets/logo/eduplex-main.svg" data-resource-id="logo" />
+<meta name="ext-resource-dependency" content="../../assets/icons/bookmark.svg" data-resource-id="icon_bookmark" />
+<meta name="ext-resource-dependency" content="../../assets/icons/plus.svg" data-resource-id="icon_plus" />
+<meta name="ext-resource-dependency" content="../../assets/icons/home.svg" data-resource-id="icon_home" />
+<meta name="ext-resource-dependency" content="../../assets/icons/search.svg" data-resource-id="icon_search" />
+<meta name="ext-resource-dependency" content="../../assets/icons/person.svg" data-resource-id="icon_person" />
+<meta name="ext-resource-dependency" content="../../assets/icons/circle-info.svg" data-resource-id="icon_circle-info" />
+<meta name="ext-resource-dependency" content="../../assets/icons/check.svg" data-resource-id="icon_check" />
+<meta name="ext-resource-dependency" content="../../assets/icons/sun.svg" data-resource-id="icon_sun" />
+<meta name="ext-resource-dependency" content="../../assets/icons/moon.svg" data-resource-id="icon_moon" />
+<link rel="stylesheet" href="standalone.css">
+<script>window.__WDS_ICON_BASE__='../../assets/icons'</script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+:root{--gnb-height:62px;--layout-max-width:1200px;--layout-padding-inline:20px}
+body{margin:0;background:var(--semantic-background-normal-normal);color:var(--semantic-label-normal)}
+a{color:var(--semantic-primary-normal)}a:hover{color:var(--semantic-primary-strong)}
+#root>div{min-height:100vh}
+::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-thumb{background:var(--semantic-fill-normal);border-radius:10px}
+</style>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#0054A7">
+<svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#0054A7"/><rect x="34" y="30" width="44" height="8" rx="2" fill="#ffffff"/><rect x="34" y="42" width="28" height="8" rx="2" fill="#ffffff" opacity=".6"/><path d="M88 34l6 6-6 6-6-6z" fill="#FFF100"/></svg>
+</template>
+<div id="root"></div>
+<script>
+(function(){var NS=window.MontageDesignSystem_4afdc8;if(!NS||!NS.Icon)return;var O=NS.Icon;NS.Icon=function(p){var R=window.__resources||{};var u=p.src||R['icon_'+p.name];return O(Object.assign({},p,{src:u}));};})();
+</script>
+<script type="text/babel" src="Gnb.jsx"></script>
+<script type="text/babel" src="Lnb.jsx"></script>
+<script type="text/babel" src="Sidebar.jsx"></script>
+<script type="text/babel" src="DocPage.jsx"></script>
+<script type="text/babel">
+const { Icon, SearchField, TextField } = window.MontageDesignSystem_4afdc8;
+const ANCHORS = { Button: ['Variant', 'Size', 'State', 'Props'], Color: ['Semantic tokens', 'Accent'] };
+
+function App() {
+  const [theme, setTheme] = React.useState('light');
+  const [section, setSection] = React.useState('components');
+  const [page, setPage] = React.useState('Button');
+  const [anchor, setAnchor] = React.useState('Variant');
+  const [search, setSearch] = React.useState(false);
+
+  React.useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const pickSection = (s) => {
+    setSection(s);
+    const first = window.LNB_PAGES[s][0].items[0];
+    setPage(first);
+    setAnchor((ANCHORS[first] || ['Selection & input'])[0]);
+  };
+  const pickPage = (p) => { setPage(p); setAnchor((ANCHORS[p] || ['Selection & input'])[0]); };
+
+  return (
+    <div>
+      <Gnb section={section} onSection={pickSection} theme={theme} onTheme={() => setTheme(theme === 'light' ? 'dark' : 'light')} onSearch={() => setSearch(true)} />
+      <div style={{ display: 'flex', gap: 40, width: '100%', margin: '0 auto', maxWidth: 'var(--layout-max-width)', boxSizing: 'content-box' }}>
+        <Lnb section={section} page={page} onPage={pickPage} />
+        <main style={{ display: 'flex', gap: 20, width: 'calc(100% - 230px)', paddingLeft: 60 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', flex: '1 1 0', minWidth: 0, padding: '56px var(--layout-padding-inline) 0', maxWidth: 'min(840px, 100%)' }}>
+            <DocPage section={section} page={page} />
+            <Footer />
+          </div>
+          <Sidebar anchors={ANCHORS[page] || ['Selection & input', 'Navigation', 'Contents & feedback', 'Loading']} active={anchor} onAnchor={setAnchor} />
+        </main>
+      </div>
+      {search && (
+        <div onClick={() => setSearch(false)} style={{ position: 'fixed', inset: 0, zIndex: 1400, background: 'var(--semantic-material-dimmer)', display: 'flex', justifyContent: 'center', paddingTop: 120 }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ width: 'min(560px, 90vw)', height: 'fit-content', borderRadius: 12, padding: 12, background: 'var(--semantic-background-elevated-normal)', boxShadow: 'var(--elevation-shadow-xlarge)' }}>
+            <SearchField autoFocus leadingContent={<Icon name="search" size={20} />} placeholder="Search documentation" width="100%" />
+            <div style={{ padding: '14px 12px 6px', fontSize: 13, lineHeight: '18px', color: 'var(--semantic-label-assistive)' }}>Algolia DocSearch · ⌘K</div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body></html>

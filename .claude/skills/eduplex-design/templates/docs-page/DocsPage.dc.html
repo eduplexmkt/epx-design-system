@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Documentation page" description="Montage docs layout: sticky GNB, sidebar nav, doc content with live component examples" -->
+<helmet><script src="./ds-base.js"></script><style>body{margin:0;background:var(--semantic-background-normal-normal);color:var(--semantic-label-normal);font-family:var(--font-family-core)}a{color:var(--semantic-primary-normal);text-decoration:none}a:hover{color:var(--semantic-primary-strong)}</style></helmet>
+<div style="min-height:100vh">
+<header style="position:sticky;top:0;z-index:1300;display:flex;align-items:center;justify-content:space-between;gap:32px;width:100%;height:62px;padding:12px 20px;box-sizing:border-box;max-width:1200px;margin:0 auto;background:color-mix(in srgb, var(--semantic-background-normal-normal) 88%, transparent);backdrop-filter:blur(32px)">
+<img src="../../assets/logo/eduplex-main.svg" alt="에듀플렉스" style="height:20px;display:block">
+<nav style="display:flex;align-items:center;gap:20px;height:22px">
+<a href="#" style="padding:12px 10px;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:600;color:var(--semantic-label-alternative)">Getting started</a>
+<a href="#" style="padding:12px 10px;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:600;color:var(--semantic-label-alternative)">Foundations</a>
+<a href="#" style="padding:12px 10px;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:600;color:var(--semantic-label-normal)">Components</a>
+<a href="#" style="padding:12px 10px;font-size:15px;line-height:22px;letter-spacing:0.0096em;font-weight:600;color:var(--semantic-label-alternative)">Utilities</a>
+</nav>
+</header>
+<div style="display:flex;gap:40px;width:100%;max-width:1200px;margin:0 auto;padding:0 20px;box-sizing:border-box">
+<aside style="width:190px;flex-shrink:0;padding:56px 0 20px">
+<div style="padding:6px 10px;font-size:13px;line-height:18px;letter-spacing:0.0194em;font-weight:600;color:var(--semantic-label-normal)">Actions</div>
+<a href="#" style="display:block;padding:7px 10px;border-radius:8px;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:600;color:var(--semantic-primary-normal);background:rgba(var(--semantic-primary-normal-rgb),0.05)">Button</a>
+<a href="#" style="display:block;padding:7px 10px;border-radius:8px;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:500;color:var(--semantic-label-alternative)">Icon Button</a>
+<a href="#" style="display:block;padding:7px 10px;border-radius:8px;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:500;color:var(--semantic-label-alternative)">Text Button</a>
+<a href="#" style="display:block;padding:7px 10px;border-radius:8px;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:500;color:var(--semantic-label-alternative)">Chip</a>
+<div style="padding:22px 10px 6px;font-size:13px;line-height:18px;letter-spacing:0.0194em;font-weight:600;color:var(--semantic-label-normal)">Selection &amp; input</div>
+<a href="#" style="display:block;padding:7px 10px;border-radius:8px;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:500;color:var(--semantic-label-alternative)">Text Field</a>
+<a href="#" style="display:block;padding:7px 10px;border-radius:8px;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:500;color:var(--semantic-label-alternative)">Checkbox</a>
+<a href="#" style="display:block;padding:7px 10px;border-radius:8px;font-size:14px;line-height:20px;letter-spacing:0.0145em;font-weight:500;color:var(--semantic-label-alternative)">Switch</a>
+</aside>
+<main style="flex:1 1 0;min-width:0;padding:56px 0 0;max-width:min(840px,100%)">
+<h1 style="margin:0;font-size:36px;line-height:48px;letter-spacing:-0.027em;font-weight:700;color:var(--semantic-label-normal)">Button</h1>
+<p style="margin:12px 0 0;font-size:16px;line-height:26px;letter-spacing:0.0057em;color:var(--semantic-label-neutral);max-width:640px">사용자가 화면에서 가장 먼저 실행할 동작을 담습니다. 한 화면에 solid primary 버튼은 하나만 두세요.</p>
+<h2 style="margin:56px 0 0;font-size:22px;line-height:30px;letter-spacing:-0.0194em;font-weight:600;color:var(--semantic-label-normal)">Variant</h2>
+<p style="margin:8px 0 0;font-size:15px;line-height:24px;letter-spacing:0.0096em;color:var(--semantic-label-neutral);max-width:640px">solid는 실행, outlined는 보조 동작에 사용합니다.</p>
+<div style="margin-top:20px;border-radius:12px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--semantic-line-normal-neutral)">
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:32px;background:var(--semantic-background-normal-alternative)">
+<x-import component-from-global-scope="MontageDesignSystem_4afdc8.Button" hint-size="120px,40px">신청하기</x-import>
+<x-import component-from-global-scope="MontageDesignSystem_4afdc8.Button" variant="outlined" hint-size="120px,40px">지점찾기</x-import>
+<x-import component-from-global-scope="MontageDesignSystem_4afdc8.Button" color="assistive" hint-size="120px,40px">나중에</x-import>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border-top:1px solid var(--semantic-line-normal-alternative)">
+<span style="font-size:12px;line-height:16px;letter-spacing:0.0252em;color:var(--semantic-label-assistive)">Preview</span>
+</div>
+</div>
+<h2 style="margin:56px 0 0;font-size:22px;line-height:30px;letter-spacing:-0.0194em;font-weight:600;color:var(--semantic-label-normal)">Size</h2>
+<p style="margin:8px 0 0;font-size:15px;line-height:24px;letter-spacing:0.0096em;color:var(--semantic-label-neutral);max-width:640px">size마다 radius·padding·타이포가 함께 바뀝니다.</p>
+<div style="margin-top:20px;border-radius:12px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--semantic-line-normal-neutral)">
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:32px;background:var(--semantic-background-normal-alternative)">
+<x-import component-from-global-scope="MontageDesignSystem_4afdc8.Button" size="large" hint-size="130px,48px">신청하기</x-import>
+<x-import component-from-global-scope="MontageDesignSystem_4afdc8.Button" size="medium" hint-size="120px,40px">신청하기</x-import>
+<x-import component-from-global-scope="MontageDesignSystem_4afdc8.Button" size="small" hint-size="100px,32px">신청하기</x-import>
+</div>
+</div>
+<h2 style="margin:56px 0 0;font-size:22px;line-height:30px;letter-spacing:-0.0194em;font-weight:600;color:var(--semantic-label-normal)">Guidelines</h2>
+<div style="margin-top:20px">
+<x-import component-from-global-scope="MontageDesignSystem_4afdc8.SectionMessage" variant="info" title="한 화면에 하나" hint-size="100%,80px">solid primary 버튼이 두 개 이상 보이면 사용자는 무엇을 눌러야 할지 판단하지 못합니다.</x-import>
+</div>
+<footer style="position:relative;display:flex;flex-direction:column;gap:20px;padding:32px 0;margin-top:120px">
+<span style="position:absolute;top:0;left:0;width:100%;height:1px;background:var(--semantic-line-normal-alternative)"></span>
+<div style="display:flex;gap:20px;flex-wrap:wrap">
+<a href="#" style="font-size:14px;line-height:142.9%;letter-spacing:0.203px;font-weight:600;color:var(--semantic-label-neutral)">GitHub</a>
+<a href="#" style="font-size:14px;line-height:142.9%;letter-spacing:0.203px;font-weight:600;color:var(--semantic-label-neutral)">Figma</a>
+<a href="#" style="font-size:14px;line-height:142.9%;letter-spacing:0.203px;font-weight:600;color:var(--semantic-label-neutral)">Changelog</a>
+</div>
+<div style="font-size:13px;line-height:18px;letter-spacing:0.0194em;color:var(--semantic-label-assistive)">에듀플렉스 마케팅 디자인 시스템</div>
+</footer>
+</main>
+</div>
+</div>
+</x-dc>
+</body>
+</html>
