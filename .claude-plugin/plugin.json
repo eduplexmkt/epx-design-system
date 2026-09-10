@@ -1,0 +1,13 @@
+{
+  "name": "eduplex-design",
+  "version": "1.0.0",
+  "description": "에듀플렉스 디자인 시스템 — 컬러·타이포·간격 토큰, 23종 컴포넌트, 아이콘, 로고, Pretendard 폰트",
+  "author": {
+    "name": "에듀플렉스 마케팅"
+  },
+  "homepage": "https://github.com/eduplexmkt/epx-design-system",
+  "repository": "https://github.com/eduplexmkt/epx-design-system",
+  "license": "MIT",
+  "keywords": ["design-system", "eduplex", "에듀플렉스", "branding", "pretendard"],
+  "skills": ["./.claude/skills/eduplex-design"]
+}

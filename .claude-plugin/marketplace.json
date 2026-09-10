@@ -1,15 +1,20 @@
 {
-  "name": "montage-web",
+  "name": "eduplex",
   "owner": {
-    "name": "wanteddev"
+    "name": "에듀플렉스 마케팅",
+    "url": "https://github.com/eduplexmkt"
   },
-  "version": "1.0.1",
-  "description": "Wanted Lab Design System for Web",
+  "version": "1.0.0",
+  "description": "에듀플렉스 마케팅 플러그인 배포처",
   "plugins": [
     {
-      "name": "montage-web-guide",
-      "source": "./.claude-plugin/montage-web-guide",
-      "description": "Guide to use Wanted Lab Design System for Web"
+      "name": "eduplex-design",
+      "source": "./",
+      "displayName": "에듀플렉스 디자인 시스템",
+      "description": "에듀플렉스 브랜드 토큰·컴포넌트·아이콘·로고·Pretendard로 화면과 시안을 만듭니다.",
+      "category": "design",
+      "keywords": ["design-system", "eduplex", "에듀플렉스", "branding", "pretendard"],
+      "license": "MIT"
     }
   ]
 }
