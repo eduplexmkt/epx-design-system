@@ -28,7 +28,7 @@ Tokens are the API. Components carry no hex literals; when a value is missing, a
 | `tokens/` | Color, type, spacing, radius, elevation, motion |
 | `components/` | 23 component families — real geometry and usage rules |
 | `guidelines/` | Foundation doc cards |
-| `assets/` | 27 icons, 4 logo files, the Pretendard binary |
+| `assets/` | 354 icons plus a searchable `index.md`, 4 logo files, the Pretendard binary |
 | `ui_kits/` | Documentation site layout |
 
 For anything shipped as a single HTML file, use `tokens/fonts-embed.css` — the font travels inside the file, so the type survives anywhere. Folder-based builds and production code use `tokens/fonts.css`.

@@ -63,7 +63,7 @@ The font is self-hosted: `assets/fonts/PretendardVariable.woff2` (variable, weig
 
 **Motion.** Brief and small. Colors and opacity transition with plain `ease` at 0.15–0.2s (chips are the exception at 0.3s); anything that *moves* uses `cubic-bezier(0.4, 0, 0.2, 1)` at 200ms — the switch thumb, the segmented-control thumb. Toasts animate height + opacity in 0.2s; tooltips cross-fade in 200ms. Card images scale to 1.025 on hover. Nothing bounces, nothing springs, nothing slides in from off-screen.
 
-**Hover and press.** Never a hue change. An absolutely positioned overlay filled with `semantic.label.normal` (the near-black ink token — `WithInteraction color="semantic.label.normal"` in the source) sits at `opacity: 0` and fades to **7.5% on hover, 18% on press** (`--interaction-hover` / `--interaction-active`) — the source library's "strong" pair, adopted here as the default because its 5%/12% normal pair is invisible against the brand navy, so every surface darkens by the same amount regardless of its own color. Do not use `currentColor` for this overlay — on a solid button the ink is white and the surface would lighten instead. Hover is suppressed on non-fine pointers. Some overlays scale from 0.95 → 1 instead. Disabled states *do* recolor: solid buttons go to `interaction.disable` with `label.assistive` text; checkboxes and switches simply drop to 43% opacity.
+**Hover and press.** Never a hue change. An absolutely positioned overlay filled with `semantic.label.normal` (the near-black ink token — `WithInteraction color="semantic.label.normal"` in the source) sits at `opacity: 0` and fades in at a strength that depends on what it covers, in three pairs: **light** 3.75% / 9% (`--interaction-hover-light` / `--interaction-active-light`) for outlined buttons and bare icon buttons, **normal** 5% / 12% for solid assistive surfaces, **strong** 7.5% / 18% (also plain `--interaction-hover` / `--interaction-active`) for solid primary. Pick the pair the source picks for that component rather than defaulting to strong everywhere — a filled navy button needs the heavy pair, a hairline one does not. Do not use `currentColor` for this overlay — on a solid button the ink is white and the surface would lighten instead. Hover is suppressed on non-fine pointers. Some overlays scale from 0.95 → 1 instead. Disabled states *do* recolor: solid buttons go to `interaction.disable` with `label.assistive` text; checkboxes and switches simply drop to 43% opacity.
 
 **Layout.** Fixed elements are the sticky top navigation (56px min, `z-index: 1300`) and the 56px mobile bottom bar, both frosted. Breakpoints are mobile-first min-widths: sm 768, md 992, lg 1200, xl 1600, and every component takes per-breakpoint prop overrides (`<Button xs={{ size: 'small' }} md={{ size: 'large' }} />`). The docs layout is a 1200px max-width band: 190px sticky LNB, 40px gap, `min(840px, 100%)` content column, right-hand TOC.
 
@@ -80,7 +80,7 @@ Inner content areas are not covers: they return to a neutral surface and the que
 
 - **One system, no substitutes.** The icon package ships **359** React icon components, generated from Figma by a sync workflow (`.github/workflows/figma-icon-sync.yml`) — manual edits get overwritten. There is no icon font, no sprite sheet and no PNG icons anywhere in the repository.
 - **Geometry.** Every icon is a 24×24 `viewBox`, `fill="none"` on the root, one or more `<path fill="currentColor">`, sized with `width="1em" height="1em"` so the glyph follows `font-size`. Strokes are drawn as filled outlines (no `stroke` attribute), with a consistent ~1.8px optical weight and rounded joins. Most icons are declared `속성: Outlined`; a `-fill` twin exists for many (`icon-bell` / `icon-bell-fill`), and `-color` variants (`icon-agent-color`, `icon-blank-color`) are multi-hue illustrations.
-- **In this project.** 27 of the 359 were extracted from their `.tsx` sources into real SVG files in `assets/icons/`, and `components/foundation/Icon.jsx` tints them via a CSS mask so `currentColor` still works. **Not a substitution** — same path data, same source. If you need one of the other 332, read it from `packages/wds-icon/src/icon-<name>.tsx` and drop the path into a new SVG the same way.
+- **In this project.** All 354 convertible icons were extracted from their `.tsx` sources into real SVG files in `assets/icons/`, with `assets/icons/index.md` listing every name, its Korean description and its keywords — read that index to find an icon rather than guessing a filename. **Not a substitution** — same path data, same source. Every path is `fill="currentColor"`, so a parent's `color` tints the icon; `components/foundation/Icon.jsx` also tints via a CSS mask. Only `logo-instagram-color` is missing: it embeds a raster image through a pattern and does not convert cleanly.
 - **Sizing in context** (from component source): 24px for icon-only large buttons and bottom navigation, 22px for GNB actions, 20px large button leading / section message / toast / field affordances, 18px medium buttons, 16px small buttons and text buttons, 14px chips and badges, 12px xsmall chips.
 - **Emoji are never used as icons.** Unicode symbols appear only as literal content (`⌘K`).
 - **Logo:** the 에듀플렉스 wordmark + four-point diamond mark, supplied by the user and stored in `assets/logo/` (see its README). **Light backgrounds use `eduplex-main.svg` (Main Color); dark and brand-color backgrounds use `eduplex-white-point.svg` (White&Point Color)** — that pairing drives the UI kit, template and thumbnail. All-black and all-white versions remain for single-ink output only. The uploaded SVGs arrived with empty `<defs>`, so the two colors were inferred from the token set — Main `#0054A7` (`primary.normal`), Point `#FFF100` (`accent.background.yellow`); confirm against the brand guide. Nothing was drawn or reconstructed. The upstream mark exists only as a React component (`docs/src/assets/logo.tsx`) and was not copied.
@@ -93,7 +93,7 @@ Root files:
 - `styles.css` — the entry point consumers link; `@import` lines only
 - `tokens/` — `fonts.css`, `colors.css`, `typography.css`, `spacing.css`, `radius.css`, `elevation.css`, `motion.css`, `base.css`
 - `assets/logo/` — 4 에듀플렉스 logo variants + usage README
-- `assets/icons/` — 27 SVG icons
+- `assets/icons/` — 354 SVG icons plus `index.md`, the searchable name/description/keyword table
 - `guidelines/` — 21 foundation specimen cards (Colors, Type, Spacing, Brand)
 - `thumbnail.html` — homepage tile
 - `SKILL.md` — Agent Skill wrapper (`eduplex-design`)
@@ -102,9 +102,10 @@ Root files:
 
 ### Components
 
-- `components/foundation/` — **Icon**
+- `components/foundation/` — **Icon**, **Typography**, **SectionHeader**
+- `components/layout/` — **FlexBox**, **Grid**, **GridItem**
 - `components/actions/` — **Button**, **IconButton**, **TextButton**, **Chip**
-- `components/selection-and-input/` — **TextField**, **SearchField**, **Select**, **Checkbox**, **RadioGroup**, **Switch**, **SegmentedControl**
+- `components/selection-and-input/` — **TextField**, **TextArea**, **SearchField**, **Select**, **Checkbox**, **RadioGroup**, **Switch**, **SegmentedControl**, **Label**, **Form** (FormField / FormLabel / FormControl / FormMessage / FormErrorMessage), **Slider**, **Stepper**
 - `components/contents/` — **Card**, **ContentBadge**, **Avatar**, **Divider**, **Skeleton**
 - `components/feedback/` — **SectionMessage**, **Toast**, **Tooltip**
 - `components/navigations/` — **Tab**, **TopNavigation**, **BottomNavigation**

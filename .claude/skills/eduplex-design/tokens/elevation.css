@@ -18,6 +18,19 @@
 --elevation-hairline:inset 0 0 0 1px var(--semantic-line-normal-neutral);
 --elevation-hairline-focus:inset 0 0 0 2px rgba(var(--semantic-primary-normal-rgb),0.43);
 --elevation-hairline-invalid:inset 0 0 0 2px rgba(var(--semantic-status-negative-rgb),0.43);
-/* frosted surfaces */
---blur-material:blur(32px)/* @kind other */
+/* frosted surfaces — the system's signature. --platform-ios-navigation is the
+   iOS navigation recipe from the theme root: elevated surface at 88% under a
+   32px blur. Apply both properties together; the blur alone is not the token. */
+--blur-material:blur(32px)/* @kind other */;
+--platform-ios-navigation-bg:#FFFFFFE0;
+--platform-ios-navigation-filter:blur(32px)/* @kind other */
+}
+:root[data-theme="dark"],
+:root:not([data-theme="light"]) [data-theme="dark"]{
+--platform-ios-navigation-bg:#212225E0
+}
+@media (prefers-color-scheme: dark){
+:root:not([data-theme="light"]){
+--platform-ios-navigation-bg:#212225E0
+}
 }

@@ -6,6 +6,17 @@ const SIZES = {
   small: { radius: 8, padding: '7px 14px', gap: 4, font: 13, line: '18px', ls: '0.0194em', icon: 16, onlyPadding: 7, onlyIcon: 18 },
 };
 
+// Interaction overlay opacity per WithInteraction variant.
+// outlined -> 'light', solid+primary -> 'strong', solid+assistive -> 'normal'.
+const INTERACTION = {
+  light: { hover: 'var(--interaction-hover-light)', active: 'var(--interaction-active-light)' },
+  normal: { hover: 'var(--interaction-hover-normal)', active: 'var(--interaction-active-normal)' },
+  strong: { hover: 'var(--interaction-hover-strong)', active: 'var(--interaction-active-strong)' },
+};
+
+const getInteractionVariant = (variant, color) =>
+  variant === 'outlined' ? 'light' : color === 'primary' ? 'strong' : 'normal';
+
 const COLORS = {
   'solid-primary': {
     color: 'var(--semantic-static-white)',
@@ -54,7 +65,8 @@ export function Button({
   const weight = color === 'assistive' ? 500 : 600;
   const [hover, setHover] = React.useState(false);
   const [press, setPress] = React.useState(false);
-  const overlay = disabled ? 0 : press ? 0.18 : hover ? 0.075 : 0;
+  const interaction = INTERACTION[getInteractionVariant(variant, color)];
+  const overlay = disabled ? 0 : press ? interaction.active : hover ? interaction.hover : 0;
 
   return (
     <button

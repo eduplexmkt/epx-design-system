@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"MontageDesignSystem_4afdc8","components":[{"name":"Button","sourcePath":"components/actions/Button.jsx"},{"name":"Chip","sourcePath":"components/actions/Chip.jsx"},{"name":"IconButton","sourcePath":"components/actions/IconButton.jsx"},{"name":"TextButton","sourcePath":"components/actions/TextButton.jsx"},{"name":"Avatar","sourcePath":"components/contents/Avatar.jsx"},{"name":"Card","sourcePath":"components/contents/Card.jsx"},{"name":"ContentBadge","sourcePath":"components/contents/ContentBadge.jsx"},{"name":"Divider","sourcePath":"components/contents/Divider.jsx"},{"name":"Skeleton","sourcePath":"components/contents/Skeleton.jsx"},{"name":"SectionMessage","sourcePath":"components/feedback/SectionMessage.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Tooltip","sourcePath":"components/feedback/Tooltip.jsx"},{"name":"Icon","sourcePath":"components/foundation/Icon.jsx"},{"name":"BottomNavigation","sourcePath":"components/navigations/BottomNavigation.jsx"},{"name":"Tab","sourcePath":"components/navigations/Tab.jsx"},{"name":"TopNavigation","sourcePath":"components/navigations/TopNavigation.jsx"},{"name":"Checkbox","sourcePath":"components/selection-and-input/Checkbox.jsx"},{"name":"RadioGroup","sourcePath":"components/selection-and-input/RadioGroup.jsx"},{"name":"SearchField","sourcePath":"components/selection-and-input/SearchField.jsx"},{"name":"SegmentedControl","sourcePath":"components/selection-and-input/SegmentedControl.jsx"},{"name":"Select","sourcePath":"components/selection-and-input/Select.jsx"},{"name":"Switch","sourcePath":"components/selection-and-input/Switch.jsx"},{"name":"TextField","sourcePath":"components/selection-and-input/TextField.jsx"}],"sourceHashes":{"components/actions/Button.jsx":"acd65c5355d0","components/actions/Chip.jsx":"a12236d35f81","components/actions/IconButton.jsx":"d2448fadfab3","components/actions/TextButton.jsx":"6d9868fb97a4","components/contents/Avatar.jsx":"20b824176f9a","components/contents/Card.jsx":"561572c1a557","components/contents/ContentBadge.jsx":"6fbc92eb51c8","components/contents/Divider.jsx":"7e79332a53f9","components/contents/Skeleton.jsx":"444db763af7b","components/feedback/SectionMessage.jsx":"feea7383687b","components/feedback/Toast.jsx":"0cb140c958d2","components/feedback/Tooltip.jsx":"95f32dd404d5","components/foundation/Icon.jsx":"57d7eacd71ad","components/navigations/BottomNavigation.jsx":"42f95df25f0b","components/navigations/Tab.jsx":"0764560249ae","components/navigations/TopNavigation.jsx":"da638ccb962b","components/selection-and-input/Checkbox.jsx":"e6090fde0483","components/selection-and-input/RadioGroup.jsx":"7d2aa51c0781","components/selection-and-input/SearchField.jsx":"01711c574a1e","components/selection-and-input/SegmentedControl.jsx":"a76bcf241a80","components/selection-and-input/Select.jsx":"74b983969725","components/selection-and-input/Switch.jsx":"0a1349367f7f","components/selection-and-input/TextField.jsx":"1c4a622f54e6","ui_kits/eduplex-docs/DocPage.jsx":"f3aad28501ec","ui_kits/eduplex-docs/Gnb.jsx":"4090a277ca04","ui_kits/eduplex-docs/Lnb.jsx":"ee2582b89000","ui_kits/eduplex-docs/Sidebar.jsx":"eff7ee7fbb77"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"MontageDesignSystem_4afdc8","components":[{"name":"Button","sourcePath":"components/actions/Button.jsx"},{"name":"Chip","sourcePath":"components/actions/Chip.jsx"},{"name":"IconButton","sourcePath":"components/actions/IconButton.jsx"},{"name":"TextButton","sourcePath":"components/actions/TextButton.jsx"},{"name":"Avatar","sourcePath":"components/contents/Avatar.jsx"},{"name":"Card","sourcePath":"components/contents/Card.jsx"},{"name":"ContentBadge","sourcePath":"components/contents/ContentBadge.jsx"},{"name":"Divider","sourcePath":"components/contents/Divider.jsx"},{"name":"Skeleton","sourcePath":"components/contents/Skeleton.jsx"},{"name":"SectionMessage","sourcePath":"components/feedback/SectionMessage.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Tooltip","sourcePath":"components/feedback/Tooltip.jsx"},{"name":"Icon","sourcePath":"components/foundation/Icon.jsx"},{"name":"BottomNavigation","sourcePath":"components/navigations/BottomNavigation.jsx"},{"name":"Tab","sourcePath":"components/navigations/Tab.jsx"},{"name":"TopNavigation","sourcePath":"components/navigations/TopNavigation.jsx"},{"name":"Checkbox","sourcePath":"components/selection-and-input/Checkbox.jsx"},{"name":"Form","sourcePath":"components/selection-and-input/Form.jsx"},{"name":"Label","sourcePath":"components/selection-and-input/Label.jsx"},{"name":"RadioGroup","sourcePath":"components/selection-and-input/RadioGroup.jsx"},{"name":"SearchField","sourcePath":"components/selection-and-input/SearchField.jsx"},{"name":"SegmentedControl","sourcePath":"components/selection-and-input/SegmentedControl.jsx"},{"name":"Select","sourcePath":"components/selection-and-input/Select.jsx"},{"name":"Slider","sourcePath":"components/selection-and-input/Slider.jsx"},{"name":"Stepper","sourcePath":"components/selection-and-input/Stepper.jsx"},{"name":"Switch","sourcePath":"components/selection-and-input/Switch.jsx"},{"name":"TextArea","sourcePath":"components/selection-and-input/TextArea.jsx"},{"name":"TextField","sourcePath":"components/selection-and-input/TextField.jsx"}],"sourceHashes":{"components/actions/Button.jsx":"acd65c5355d0","components/actions/Chip.jsx":"a12236d35f81","components/actions/IconButton.jsx":"d2448fadfab3","components/actions/TextButton.jsx":"6d9868fb97a4","components/contents/Avatar.jsx":"20b824176f9a","components/contents/Card.jsx":"561572c1a557","components/contents/ContentBadge.jsx":"6fbc92eb51c8","components/contents/Divider.jsx":"7e79332a53f9","components/contents/Skeleton.jsx":"444db763af7b","components/feedback/SectionMessage.jsx":"feea7383687b","components/feedback/Toast.jsx":"0cb140c958d2","components/feedback/Tooltip.jsx":"95f32dd404d5","components/foundation/Icon.jsx":"57d7eacd71ad","components/navigations/BottomNavigation.jsx":"42f95df25f0b","components/navigations/Tab.jsx":"0764560249ae","components/navigations/TopNavigation.jsx":"da638ccb962b","components/selection-and-input/Checkbox.jsx":"e6090fde0483","components/selection-and-input/Form.jsx":"747d27cf547a","components/selection-and-input/Label.jsx":"6b8a16c120f1","components/selection-and-input/RadioGroup.jsx":"7d2aa51c0781","components/selection-and-input/SearchField.jsx":"01711c574a1e","components/selection-and-input/SegmentedControl.jsx":"a76bcf241a80","components/selection-and-input/Select.jsx":"74b983969725","components/selection-and-input/Slider.jsx":"89f00d59b7f9","components/selection-and-input/Stepper.jsx":"14e43368dd22","components/selection-and-input/Switch.jsx":"0a1349367f7f","components/selection-and-input/TextArea.jsx":"cedd62252ea5","components/selection-and-input/TextField.jsx":"1c4a622f54e6","ui_kits/eduplex-docs/DocPage.jsx":"f3aad28501ec","ui_kits/eduplex-docs/Gnb.jsx":"4090a277ca04","ui_kits/eduplex-docs/Lnb.jsx":"ee2582b89000","ui_kits/eduplex-docs/Sidebar.jsx":"eff7ee7fbb77"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -1672,6 +1672,214 @@ function Checkbox({
 Object.assign(__ds_scope, { Checkbox });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/selection-and-input/Checkbox.jsx", error: String((e && e.message) || e) }); }
 
+// components/selection-and-input/Form.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const {
+  Children,
+  cloneElement,
+  createContext,
+  isValidElement,
+  useContext,
+  useId
+} = React;
+const FormFieldContext = createContext(null);
+function useFormField() {
+  const ctx = useContext(FormFieldContext);
+  const id = ctx ? ctx.id : '';
+  return {
+    id,
+    formLabelId: `${id}-form-label`,
+    formFieldId: `${id}-form-field`,
+    formMessageId: `${id}-form-field-message`,
+    formErrorMessageId: `${id}-form-field-error-message`
+  };
+}
+
+/** One labelled row of a form. Stacks label, control and messages in a column
+ * with an 8px gap, and hands every child the same generated id. */
+function FormField({
+  children,
+  style,
+  ...rest
+}) {
+  const id = useId();
+  return /*#__PURE__*/React.createElement(FormFieldContext.Provider, {
+    value: {
+      id
+    }
+  }, /*#__PURE__*/React.createElement("div", _extends({
+    "data-wds": "form-field"
+  }, rest, {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 8,
+      ...style
+    }
+  }), children));
+}
+
+/** Label wired to the field's control via htmlFor. */
+function FormLabel({
+  required = false,
+  display = 'inline-block',
+  children,
+  style,
+  ...rest
+}) {
+  const {
+    formLabelId,
+    formFieldId
+  } = useFormField();
+  return /*#__PURE__*/React.createElement("label", _extends({
+    "data-wds": "form-label",
+    id: formLabelId,
+    htmlFor: formFieldId
+  }, rest, {
+    style: {
+      display,
+      color: 'var(--semantic-label-neutral)',
+      fontFamily: 'var(--font-family-core)',
+      fontSize: 14,
+      lineHeight: '20px',
+      letterSpacing: '0.0145em',
+      fontWeight: 600,
+      ...style
+    }
+  }), children, required && /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      display: 'inline-block',
+      marginLeft: 4,
+      color: 'var(--semantic-status-negative)',
+      fontSize: 14,
+      lineHeight: '20px',
+      letterSpacing: '0.0145em',
+      fontWeight: 500
+    }
+  }, "*"));
+}
+
+/** Renders nothing of its own — it forwards the field's id and aria wiring onto
+ * the single control passed as its child. */
+function FormControl({
+  children,
+  ...rest
+}) {
+  const {
+    formFieldId,
+    formLabelId,
+    formMessageId,
+    formErrorMessageId
+  } = useFormField();
+  const child = Children.only(children);
+  if (!isValidElement(child)) return child;
+  return cloneElement(child, {
+    id: formFieldId,
+    'aria-describedby': `${formMessageId} ${formErrorMessageId}`,
+    'aria-labelledby': formLabelId,
+    ...rest
+  });
+}
+
+/** Neutral helper text under the control. Renders nothing when empty. */
+function FormMessage({
+  children,
+  style,
+  ...rest
+}) {
+  const {
+    formMessageId
+  } = useFormField();
+  if (!children) return null;
+  return /*#__PURE__*/React.createElement("p", _extends({
+    "data-wds": "form-message",
+    id: formMessageId
+  }, rest, {
+    style: {
+      margin: 0,
+      color: 'var(--semantic-label-alternative)',
+      fontFamily: 'var(--font-family-core)',
+      fontSize: 13,
+      lineHeight: '18px',
+      letterSpacing: '0.0194em',
+      fontWeight: 400,
+      ...style
+    }
+  }), children);
+}
+
+/** Error text under the control. Same type as FormMessage, negative colour. */
+function FormErrorMessage({
+  children,
+  style,
+  ...rest
+}) {
+  const {
+    formErrorMessageId
+  } = useFormField();
+  if (!children) return null;
+  return /*#__PURE__*/React.createElement("p", _extends({
+    "data-wds": "form-error-message",
+    id: formErrorMessageId
+  }, rest, {
+    style: {
+      margin: 0,
+      color: 'var(--semantic-status-negative)',
+      fontFamily: 'var(--font-family-core)',
+      fontSize: 13,
+      lineHeight: '18px',
+      letterSpacing: '0.0194em',
+      fontWeight: 400,
+      ...style
+    }
+  }), children);
+}
+Object.assign(__ds_scope, { FormField, FormLabel, FormControl, FormMessage, FormErrorMessage });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/selection-and-input/Form.jsx", error: String((e && e.message) || e) }); }
+
+// components/selection-and-input/Label.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+/** The caption above a form control: label1 bold on label.neutral, with an
+ * optional negative asterisk for required fields. */
+function Label({
+  required = false,
+  display = 'inline-block',
+  children,
+  style,
+  ...rest
+}) {
+  return /*#__PURE__*/React.createElement("label", _extends({
+    "data-wds": "label"
+  }, rest, {
+    style: {
+      display,
+      color: 'var(--semantic-label-neutral)',
+      fontFamily: 'var(--font-family-core)',
+      fontSize: 14,
+      lineHeight: '20px',
+      letterSpacing: '0.0145em',
+      fontWeight: 600,
+      ...style
+    }
+  }), children, required && /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      display: 'inline-block',
+      marginLeft: 4,
+      color: 'var(--semantic-status-negative)',
+      fontSize: 14,
+      lineHeight: '20px',
+      letterSpacing: '0.0145em',
+      fontWeight: 500
+    }
+  }, "*"));
+}
+Object.assign(__ds_scope, { Label });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/selection-and-input/Label.jsx", error: String((e && e.message) || e) }); }
+
 // components/selection-and-input/RadioGroup.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
@@ -2079,6 +2287,391 @@ function Select({
 Object.assign(__ds_scope, { Select });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/selection-and-input/Select.jsx", error: String((e && e.message) || e) }); }
 
+// components/selection-and-input/Slider.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const {
+  useRef,
+  useState
+} = React;
+const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
+const percent = (value, min, max) => (value - min) / (max - min) * 100;
+
+/** Range control. One or more 20px thumbs on a 4px track, sized by the values
+ * array — pass two values for a range, one for a single point. */
+function Slider({
+  title,
+  label,
+  min = 0,
+  max = 100,
+  step = 1,
+  value,
+  defaultValue = [min],
+  disabled = false,
+  onValueChange,
+  onValueChangeComplete,
+  name,
+  style,
+  ...rest
+}) {
+  const [inner, setInner] = useState(defaultValue);
+  const values = value ?? inner;
+  const trackRef = useRef(null);
+  const dragging = useRef(-1);
+  const commit = (next, done) => {
+    if (value === undefined) setInner(next);
+    onValueChange?.(next);
+    if (done) onValueChangeComplete?.(next);
+  };
+  const setAt = (index, raw, done) => {
+    const snapped = clamp(Math.round((raw - min) / step) * step + min, min, max);
+    const next = [...values];
+    next[index] = snapped;
+    next.sort((a, b) => a - b);
+    if (next.toString() === values.toString() && !done) return;
+    commit(next, done);
+  };
+  const valueFromPointer = clientX => {
+    const rect = trackRef.current?.getBoundingClientRect();
+    if (!rect) return min;
+    return min + (clientX - rect.left) / rect.width * (max - min);
+  };
+  const closestIndex = v => {
+    let best = 0;
+    values.forEach((cur, i) => {
+      if (Math.abs(cur - v) < Math.abs(values[best] - v)) best = i;
+    });
+    return best;
+  };
+  const lo = Math.min(...values);
+  const hi = Math.max(...values);
+  return /*#__PURE__*/React.createElement("span", _extends({
+    "data-wds": "slider"
+  }, rest, {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      width: '100%',
+      ...style
+    }
+  }), title !== undefined && /*#__PURE__*/React.createElement("span", {
+    "data-role": "slider-title",
+    style: {
+      display: 'block',
+      margin: '0 auto 32px auto',
+      textAlign: 'center',
+      color: disabled ? 'var(--semantic-label-disable)' : 'var(--semantic-label-normal)',
+      fontFamily: 'var(--font-family-core)',
+      fontSize: 17,
+      lineHeight: '24px',
+      letterSpacing: '0em',
+      fontWeight: 600
+    }
+  }, typeof title === 'function' ? title({
+    values,
+    disabled,
+    min,
+    max
+  }) : title), /*#__PURE__*/React.createElement("span", {
+    ref: trackRef,
+    "data-role": "slider-progress-wrapper",
+    style: {
+      display: 'block',
+      position: 'relative',
+      padding: 8,
+      borderRadius: 1000,
+      cursor: disabled ? 'initial' : 'pointer'
+    },
+    onPointerDown: event => {
+      if (disabled) return;
+      event.currentTarget.setPointerCapture(event.pointerId);
+      const raw = valueFromPointer(event.clientX);
+      dragging.current = closestIndex(raw);
+      setAt(dragging.current, raw);
+    },
+    onPointerMove: event => {
+      if (disabled || dragging.current < 0) return;
+      setAt(dragging.current, valueFromPointer(event.clientX));
+    },
+    onPointerUp: event => {
+      if (disabled || dragging.current < 0) return;
+      event.currentTarget.releasePointerCapture(event.pointerId);
+      setAt(dragging.current, valueFromPointer(event.clientX), true);
+      dragging.current = -1;
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    "data-role": "slider-progress-range",
+    style: {
+      display: 'block',
+      overflow: 'hidden',
+      position: 'relative',
+      width: '100%',
+      height: 4,
+      borderRadius: 'inherit',
+      backgroundColor: disabled ? 'var(--semantic-interaction-disable)' : 'var(--semantic-fill-strong)'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    "data-role": "slider-progress",
+    style: {
+      position: 'absolute',
+      height: '100%',
+      borderRadius: 'inherit',
+      backgroundColor: disabled ? 'var(--semantic-interaction-disable)' : 'var(--semantic-primary-normal)',
+      left: `${values.length > 1 ? percent(lo, min, max) : 0}%`,
+      right: `${100 - percent(hi, min, max)}%`
+    }
+  })), values.map((v, index) => /*#__PURE__*/React.createElement(SliderThumb, {
+    key: index,
+    value: v,
+    min: min,
+    max: max,
+    step: step,
+    name: name ? values.length > 1 ? `${name}[]` : name : undefined,
+    disabled: disabled,
+    onStep: (delta, done) => setAt(index, v + delta, done),
+    onJump: (target, done) => setAt(index, target, done)
+  }))), label !== undefined && /*#__PURE__*/React.createElement("span", {
+    "data-role": "slider-label-wrapper",
+    style: {
+      display: 'block',
+      position: 'relative',
+      height: 20,
+      marginTop: 8
+    }
+  }, values.map((v, index) => {
+    const rendered = typeof label === 'function' ? label({
+      value: v,
+      index,
+      min,
+      max,
+      disabled
+    }) : label;
+    if (!rendered) return null;
+    const p = percent(v, min, max);
+    return /*#__PURE__*/React.createElement("span", {
+      key: index,
+      "data-role": "slider-label",
+      style: {
+        display: 'inline-block',
+        position: 'absolute',
+        width: 'max-content',
+        left: `${p}%`,
+        transform: `translateX(-${p}%)`,
+        color: disabled ? 'var(--semantic-label-disable)' : 'var(--semantic-label-normal)',
+        fontFamily: 'var(--font-family-core)',
+        fontSize: 14,
+        lineHeight: '20px',
+        letterSpacing: '0.0145em',
+        fontWeight: 500
+      }
+    }, rendered);
+  })));
+}
+function SliderThumb({
+  value,
+  min,
+  max,
+  step,
+  name,
+  disabled,
+  onStep,
+  onJump
+}) {
+  const [halo, setHalo] = useState(false);
+  const p = percent(value, min, max);
+  return /*#__PURE__*/React.createElement("span", {
+    role: "slider",
+    "data-role": "slider-thumb",
+    "aria-valuemin": min,
+    "aria-valuemax": max,
+    "aria-valuenow": value,
+    "aria-disabled": disabled,
+    tabIndex: disabled ? -1 : 0,
+    onMouseEnter: () => setHalo(true),
+    onMouseLeave: () => setHalo(false),
+    onFocus: () => setHalo(true),
+    onBlur: () => setHalo(false),
+    onKeyDown: event => {
+      if (disabled) return;
+      if (event.key === 'Home' || event.key === 'End') {
+        event.preventDefault();
+        onJump(event.key === 'Home' ? min : max, true);
+        return;
+      }
+      const back = ['ArrowDown', 'ArrowLeft', 'PageDown'].includes(event.key);
+      const forward = ['ArrowUp', 'ArrowRight', 'PageUp'].includes(event.key);
+      if (!back && !forward) return;
+      event.preventDefault();
+      // Page keys and shift-arrows move ten steps at a time.
+      const multiplier = event.key.startsWith('Page') || event.shiftKey ? 10 : 1;
+      onStep((back ? -1 : 1) * step * multiplier, true);
+    },
+    style: {
+      display: 'block',
+      position: 'absolute',
+      top: 0,
+      width: 20,
+      height: 20,
+      borderRadius: 9999,
+      backgroundColor: disabled ? 'var(--semantic-interaction-disable)' : 'var(--semantic-primary-normal)',
+      boxShadow: '0 0 0 2px var(--semantic-background-normal-normal)',
+      outline: 'none',
+      pointerEvents: disabled ? 'none' : undefined,
+      cursor: disabled ? 'initial' : 'pointer',
+      left: `${p}%`,
+      transform: `translateX(-${p}%)`
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    "data-role": "slider-thumb-interaction",
+    style: {
+      display: 'inline-block',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      width: 'calc(100% + 12px)',
+      height: 'calc(100% + 12px)',
+      borderRadius: 'inherit',
+      backgroundColor: 'var(--semantic-primary-normal)',
+      opacity: disabled || !halo ? 0 : 0.075,
+      transition: 'opacity 0.15s ease'
+    }
+  }), name && /*#__PURE__*/React.createElement("input", {
+    type: "hidden",
+    name: name,
+    value: value,
+    readOnly: true
+  }));
+}
+Object.assign(__ds_scope, { Slider });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/selection-and-input/Slider.jsx", error: String((e && e.message) || e) }); }
+
+// components/selection-and-input/Stepper.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const {
+  Children,
+  cloneElement,
+  isValidElement
+} = React;
+/** Horizontal progress trail: numbered 20px circles joined by tight chevrons. */
+function Stepper({
+  value,
+  children,
+  style,
+  ...rest
+}) {
+  const items = Children.toArray(children).filter(isValidElement);
+  const activeIndex = items.findIndex(child => child.props.value === value);
+  return /*#__PURE__*/React.createElement("ol", _extends({
+    "data-wds": "stepper",
+    "aria-label": "progress"
+  }, rest, {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 24,
+      width: '100%',
+      height: 'fit-content',
+      position: 'relative',
+      listStyle: 'none',
+      padding: 0,
+      margin: 0,
+      ...style
+    }
+  }), items.map((child, index) => cloneElement(child, {
+    key: index,
+    index,
+    isActive: index === activeIndex,
+    isCompleted: activeIndex > index
+  })));
+}
+
+/** One step. Rendered by Stepper — index and state are injected, not passed. */
+function StepperItem({
+  value,
+  index = 0,
+  isActive = false,
+  isCompleted = false,
+  label,
+  completedLabel,
+  style,
+  ...rest
+}) {
+  const text = isCompleted ? completedLabel : label;
+  const filled = isActive || isCompleted;
+  return /*#__PURE__*/React.createElement(React.Fragment, null, index !== 0 && /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      display: 'flex',
+      fontSize: 16,
+      color: 'var(--semantic-label-assistive)'
+    }
+  }, /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 12 24",
+    width: "16",
+    height: "16"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M2.86364 4.86346C2.51217 5.21493 2.51217 5.78478 2.86364 6.13625L8.72725 11.9999L2.86364 17.8635C2.51217 18.2149 2.51217 18.7848 2.86364 19.1362C3.21511 19.4877 3.78496 19.4877 4.13643 19.1362L10.6364 12.6362C10.9879 12.2848 10.9879 11.7149 10.6364 11.3635L4.13643 4.86346C3.78496 4.51199 3.21511 4.51199 2.86364 4.86346Z",
+    fill: "currentColor"
+  }))), /*#__PURE__*/React.createElement("li", _extends({
+    "data-wds": "stepper-item",
+    "aria-current": isActive ? 'step' : undefined,
+    "aria-label": `Step ${index}`
+  }, rest, {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8,
+      ...style
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      position: 'relative',
+      width: 20,
+      height: 20,
+      borderRadius: 9999,
+      fontSize: 14,
+      backgroundColor: filled ? 'var(--semantic-primary-normal)' : 'var(--semantic-fill-strong)',
+      color: 'var(--semantic-static-white)'
+    }
+  }, isCompleted ? /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 24 24",
+    width: "14",
+    height: "14"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M19.6697 6.58096C20.1774 7.08864 20.1774 7.91175 19.6697 8.41943L10.6697 17.4194C10.1621 17.9271 9.33894 17.9271 8.83126 17.4194L4.33126 12.9194C3.82358 12.4118 3.82358 11.5886 4.33126 11.081C4.83894 10.5733 5.66206 10.5733 6.16974 11.081L9.7505 14.6617L17.8313 6.58096C18.3389 6.07327 19.1621 6.07327 19.6697 6.58096Z",
+    fill: "currentColor"
+  })) : /*#__PURE__*/React.createElement("span", {
+    style: {
+      textAlign: 'center',
+      fontFamily: 'var(--font-family-core)',
+      fontSize: 12,
+      lineHeight: '16px',
+      letterSpacing: '0.0252em',
+      fontWeight: 600,
+      textShadow: filled ? 'none' : '0px 0px 12px rgba(0,0,0,0.12)'
+    }
+  }, index + 1)), Boolean(text) && /*#__PURE__*/React.createElement("span", {
+    style: {
+      padding: '1px 0px',
+      height: 'fit-content',
+      color: isActive ? 'var(--semantic-label-normal)' : 'var(--semantic-label-alternative)',
+      fontFamily: 'var(--font-family-core)',
+      fontSize: 13,
+      lineHeight: '18px',
+      letterSpacing: '0.0194em',
+      fontWeight: 600
+    }
+  }, text)));
+}
+Object.assign(__ds_scope, { Stepper, StepperItem });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/selection-and-input/Stepper.jsx", error: String((e && e.message) || e) }); }
+
 // components/selection-and-input/Switch.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
@@ -2141,6 +2734,224 @@ function Switch({
 }
 Object.assign(__ds_scope, { Switch });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/selection-and-input/Switch.jsx", error: String((e && e.message) || e) }); }
+
+// components/selection-and-input/TextArea.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const {
+  createContext,
+  useContext,
+  useEffect,
+  useRef,
+  useState
+} = React;
+/** Source line height for body1-reading — the row unit the auto-grow math uses. */
+const LINE_HEIGHT = 26;
+const LengthContext = createContext(0);
+
+/** Multi-line input. Same 12px frosted shell as TextField, but the shell is a
+ * column: the textarea sits on top, a bottom row carries counters and actions. */
+function TextArea({
+  value,
+  defaultValue,
+  placeholder,
+  invalid = false,
+  disabled = false,
+  width = 'fit-content',
+  minRows = 2,
+  maxRows,
+  leadingContent,
+  trailingContent,
+  onChange,
+  style,
+  ...rest
+}) {
+  const [focused, setFocused] = useState(false);
+  const [length, setLength] = useState(String(value ?? defaultValue ?? '').length);
+  const ref = useRef(null);
+  const grow = () => {
+    const el = ref.current;
+    if (!el) return;
+    el.style.height = 'auto';
+    const min = minRows * LINE_HEIGHT;
+    const max = maxRows ? maxRows * LINE_HEIGHT : Infinity;
+    el.style.height = Math.min(Math.max(el.scrollHeight, min), max) + 'px';
+  };
+  useEffect(grow);
+  const ring = disabled ? 'inset 0 0 0 1px var(--semantic-line-normal-alternative)' : focused ? invalid ? 'inset 0 0 0 2px rgba(var(--semantic-status-negative-rgb),0.43)' : 'inset 0 0 0 2px rgba(var(--semantic-primary-normal-rgb),0.43)' : invalid ? 'inset 0 0 0 1px rgba(var(--semantic-status-negative-rgb),0.28)' : 'inset 0 0 0 1px var(--semantic-line-normal-neutral)';
+  const showBottom = invalid || Boolean(leadingContent) || Boolean(trailingContent);
+  return /*#__PURE__*/React.createElement(LengthContext.Provider, {
+    value: length
+  }, /*#__PURE__*/React.createElement("div", {
+    "data-wds": "text-area",
+    onClick: event => {
+      // Clicking the shell focuses the field, but never steals a click
+      // aimed at a control sitting in the bottom row.
+      if (disabled || event.target.closest('input, textarea, button, a, [contenteditable]')) return;
+      ref.current?.focus();
+    },
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 12,
+      width,
+      padding: 12,
+      border: 'none',
+      borderRadius: 12,
+      boxShadow: `${ring}, var(--elevation-shadow-xsmall)`,
+      backgroundColor: disabled ? 'var(--semantic-fill-alternative)' : 'var(--semantic-background-transparent-normal)',
+      backdropFilter: disabled ? 'none' : 'blur(32px)',
+      cursor: disabled ? 'default' : 'text',
+      transition: 'box-shadow ease 0.2s',
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("textarea", _extends({
+    ref: ref,
+    value: value,
+    defaultValue: defaultValue,
+    placeholder: placeholder,
+    disabled: disabled,
+    "aria-invalid": invalid,
+    rows: minRows,
+    onChange: event => {
+      setLength(event.target.value.length);
+      grow();
+      onChange?.(event);
+    },
+    onFocus: () => setFocused(true),
+    onBlur: () => setFocused(false)
+  }, rest, {
+    style: {
+      display: 'block',
+      width: '100%',
+      height: minRows * LINE_HEIGHT,
+      padding: '0px 4px',
+      flexShrink: 2,
+      border: 'none',
+      outline: 'none',
+      resize: 'none',
+      background: 'transparent',
+      caretColor: 'var(--semantic-primary-normal)',
+      color: disabled ? 'var(--semantic-label-alternative)' : 'var(--semantic-label-normal)',
+      fontFamily: 'var(--font-family-core)',
+      fontSize: 16,
+      lineHeight: `${LINE_HEIGHT}px`,
+      letterSpacing: '0.0057em',
+      fontWeight: 400,
+      scrollbarWidth: 'none'
+    }
+  })), showBottom && /*#__PURE__*/React.createElement("div", {
+    "data-role": "text-area-bottom-area",
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      width: '100%'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center'
+    }
+  }, leadingContent), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center'
+    }
+  }, trailingContent || invalid && /*#__PURE__*/React.createElement(TextAreaContent, {
+    variant: "icon",
+    "data-role": "text-area-invalid",
+    style: {
+      color: 'var(--semantic-status-negative)'
+    }
+  }, /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 24 24",
+    width: "22",
+    height: "22"
+  }, /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M2.09991 11.9996C2.09991 6.53199 6.53228 2.09961 11.9999 2.09961C17.4675 2.09961 21.8998 6.53199 21.8998 11.9996C21.8998 17.4672 17.4675 21.8996 11.9999 21.8996C6.53228 21.8996 2.09991 17.4672 2.09991 11.9996ZM12 7.09951C12.497 7.09951 12.9 7.50246 12.9 7.99951V12.4995C12.9 12.9966 12.497 13.3995 12 13.3995C11.5029 13.3995 11.1 12.9966 11.1 12.4995V7.99951C11.1 7.50246 11.5029 7.09951 12 7.09951ZM12.9998 15.9995C12.9998 16.5518 12.5521 16.9995 11.9998 16.9995C11.4476 16.9995 10.9999 16.5518 10.9999 15.9995C10.9999 15.4472 11.4476 14.9995 11.9998 14.9995C12.5521 14.9995 12.9998 15.4472 12.9998 15.9995Z",
+    fill: "currentColor"
+  })))))));
+}
+
+/** Slot wrapper for anything placed in the text area's bottom row. */
+function TextAreaContent({
+  variant = 'characterCounter',
+  children,
+  style,
+  ...rest
+}) {
+  const length = useContext(LengthContext);
+  const base = {
+    flexShrink: 0,
+    width: 'fit-content',
+    height: 'fit-content'
+  };
+  if (variant === 'characterCounter') {
+    const overflow = !isNaN(Number(children)) && length > Number(children);
+    return /*#__PURE__*/React.createElement("div", _extends({
+      "data-wds": "text-area-content"
+    }, rest, {
+      style: {
+        ...base,
+        padding: '0px 4px',
+        opacity: 0.74,
+        color: 'var(--semantic-label-alternative)',
+        fontFamily: 'var(--font-family-core)',
+        fontSize: 13,
+        lineHeight: '18px',
+        letterSpacing: '0.0194em',
+        fontWeight: 500,
+        ...style
+      }
+    }), /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: overflow ? 'var(--semantic-status-negative)' : undefined
+      }
+    }, length), /*#__PURE__*/React.createElement("span", null, "/"), /*#__PURE__*/React.createElement("span", null, children));
+  }
+  if (variant === 'button') {
+    return /*#__PURE__*/React.createElement("div", _extends({
+      "data-wds": "text-area-content"
+    }, rest, {
+      style: {
+        ...base,
+        display: 'flex',
+        alignItems: 'center',
+        maxHeight: 24,
+        padding: '0px 4px',
+        ...style
+      }
+    }), children);
+  }
+  if (variant === 'icon') {
+    return /*#__PURE__*/React.createElement("div", _extends({
+      "data-wds": "text-area-content"
+    }, rest, {
+      style: {
+        ...base,
+        display: 'flex',
+        fontSize: 22,
+        padding: 1,
+        color: 'var(--semantic-label-assistive)',
+        ...style
+      }
+    }), children);
+  }
+  return /*#__PURE__*/React.createElement("div", _extends({
+    "data-wds": "text-area-content"
+  }, rest, {
+    style: {
+      ...base,
+      display: 'flex',
+      ...style
+    }
+  }), children);
+}
+Object.assign(__ds_scope, { TextArea, TextAreaContent });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/selection-and-input/TextArea.jsx", error: String((e && e.message) || e) }); }
 
 // components/selection-and-input/TextField.jsx
 try { (() => {
@@ -3146,6 +3957,18 @@ __ds_ns.TopNavigation = __ds_scope.TopNavigation;
 
 __ds_ns.Checkbox = __ds_scope.Checkbox;
 
+__ds_ns.FormField = __ds_scope.FormField;
+
+__ds_ns.FormLabel = __ds_scope.FormLabel;
+
+__ds_ns.FormControl = __ds_scope.FormControl;
+
+__ds_ns.FormMessage = __ds_scope.FormMessage;
+
+__ds_ns.FormErrorMessage = __ds_scope.FormErrorMessage;
+
+__ds_ns.Label = __ds_scope.Label;
+
 __ds_ns.RadioGroup = __ds_scope.RadioGroup;
 
 __ds_ns.SearchField = __ds_scope.SearchField;
@@ -3154,7 +3977,17 @@ __ds_ns.SegmentedControl = __ds_scope.SegmentedControl;
 
 __ds_ns.Select = __ds_scope.Select;
 
+__ds_ns.Slider = __ds_scope.Slider;
+
+__ds_ns.Stepper = __ds_scope.Stepper;
+
+__ds_ns.StepperItem = __ds_scope.StepperItem;
+
 __ds_ns.Switch = __ds_scope.Switch;
+
+__ds_ns.TextArea = __ds_scope.TextArea;
+
+__ds_ns.TextAreaContent = __ds_scope.TextAreaContent;
 
 __ds_ns.TextField = __ds_scope.TextField;
 

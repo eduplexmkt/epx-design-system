@@ -28,7 +28,7 @@
 | `tokens/` | 컬러, 타이포, 간격, 라운드, 그림자, 모션 |
 | `components/` | 23종 컴포넌트의 실제 형상과 사용 규칙 |
 | `guidelines/` | 파운데이션 문서 카드 |
-| `assets/` | 아이콘 27종, 로고 4종, Pretendard 폰트 |
+| `assets/` | 아이콘 354종(+`index.md` 검색표), 로고 4종, Pretendard 폰트 |
 | `ui_kits/` | 문서 사이트 레이아웃 |
 
 단일 HTML 파일로 내보내는 시안·아티팩트에는 `tokens/fonts-embed.css` 를 씁니다. 폰트가 파일 안에 들어 있어 어디서 열어도 서체가 유지됩니다. 폴더째 쓰는 문서 사이트나 프로덕션 코드에서는 `tokens/fonts.css` 를 씁니다.

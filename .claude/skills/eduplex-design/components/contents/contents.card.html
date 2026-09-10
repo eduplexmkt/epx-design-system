@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components" viewport="700x330" name="Contents" subtitle="Card, ContentBadge, Avatar, Divider, Skeleton" -->
+<!-- @dsCard group="Components" viewport="700x760" name="Contents" subtitle="Card, Thumbnail, ContentBadge, Avatar, Divider, Skeleton, Accordion, Table" -->
 <!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8"><title>Contents</title><link rel="stylesheet" href="../../styles.css">
 <script>window.__WDS_ICON_BASE__='../../assets/icons'</script>
@@ -8,7 +8,17 @@
 <script src="../../_ds_bundle.js"></script>
 <style>body{margin:0;padding:20px;background:var(--semantic-background-normal-normal)}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:14px}.lbl{font-size:11px;line-height:14px;letter-spacing:.0311em;font-weight:500;color:var(--semantic-label-assistive)}</style></head><body><div id="root"></div>
 <script type="text/babel">
-const { Card, ContentBadge, Avatar, Divider, Skeleton, Icon } = window.MontageDesignSystem_4afdc8;
+const { Card, Thumbnail, ContentBadge, Avatar, Divider, Skeleton, Accordion, Table, Icon } = window.MontageDesignSystem_4afdc8;
+const COLUMNS = [
+  { key: 'name', label: '학생' },
+  { key: 'center', label: '센터' },
+  { key: 'weekly', label: '위클리', align: 'right' },
+];
+const ROWS = [
+  { id: 1, name: '김서준', center: '강남캠퍼스', weekly: '제출 완료' },
+  { id: 2, name: '이하윤', center: '분당캠퍼스', weekly: '미제출' },
+  { id: 3, name: '박도현', center: '일산캠퍼스', weekly: '제출 완료' },
+];
 function Demo(){
   return (
     <div className="col">
@@ -33,6 +43,30 @@ function Demo(){
           <Skeleton variant="text" width="80%" />
           <Skeleton variant="text" width="55%" />
         </div>
+      </div>
+      <div className="row" style={{gap:16,alignItems:'flex-start'}}>
+        <div className="col" style={{gap:8,width:150}}>
+          <div className="lbl">THUMBNAIL · 4:3 radius</div>
+          <Thumbnail ratio="4:3" radius width="100%" />
+        </div>
+        <div className="col" style={{gap:8,width:110}}>
+          <div className="lbl">1:1 · border</div>
+          <Thumbnail ratio="1:1" radius border width="100%" />
+        </div>
+        <div className="col" style={{gap:8,width:110}}>
+          <div className="lbl">3:2 portrait</div>
+          <Thumbnail ratio="3:2" portrait radius width="100%" />
+        </div>
+      </div>
+      <div className="col" style={{gap:0}}>
+        <div className="lbl" style={{marginBottom:6}}>ACCORDION</div>
+        <Accordion defaultExpanded summary="자기주도학습 코칭이 무엇인가요?" description="학생이 스스로 계획을 세우고 점검하도록 코치가 매주 함께 확인하는 학습 방식입니다." />
+        <Accordion summary="상담은 어떻게 신청하나요?" description="가까운 캠퍼스로 문의하시면 공부유형검사와 함께 무료로 진행됩니다." />
+        <Accordion disabled summary="이용 중인 센터 변경" description="담당 선생님을 통해 변경할 수 있습니다." />
+      </div>
+      <div className="col" style={{gap:8}}>
+        <div className="lbl">TABLE · 12px radius, sticky head</div>
+        <Table columns={COLUMNS} rows={ROWS} interaction />
       </div>
     </div>
   );

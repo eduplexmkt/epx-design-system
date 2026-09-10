@@ -1,34 +1,60 @@
 import React from 'react';
 
-const BASE = () =>
-  (typeof window !== 'undefined' && window.__WDS_ICON_BASE__) || 'assets/icons';
-
 /**
- * Montage icons are 24x24 outlined SVGs drawn on a 0.9px-rounded geometry and
- * always filled with currentColor. They are recolored here through a CSS mask so
- * the file on disk stays the single source of truth.
+ * Icons are 24x24 SVGs from `assets/icons/`, and they are INLINED, never linked.
+ *
+ * Why: a `mask-image: url(...)` or `<img src>` is a resource fetch. It dies in a
+ * standalone HTML file opened from disk or mailed as an attachment — exactly the
+ * output this skill is built for — and a mask throws away color, flattening the
+ * eleven multi-color icons (`*-color.svg`, brand marks like logo-kakao-color)
+ * into a single-tone silhouette.
+ *
+ * Read `assets/icons/<name>.svg`, take the markup between `<svg …>` and `</svg>`,
+ * and hand it over as `markup`. Every path in the monochrome icons is
+ * `fill="currentColor"`, so the parent's `color` tints them natively; the
+ * `*-color` icons carry their own fills and are left alone.
+ *
+ * Use `assets/icons/index.md` to find an icon by Korean description or keyword
+ * rather than guessing at a filename.
  */
-export function Icon({ name, size = 24, src, style, ...rest }) {
-  const url = src || `${BASE()}/${name}.svg`;
+export function Icon({ name, size = 24, markup, viewBox = '0 0 24 24', children, style, ...rest }) {
+  const box = {
+    display: 'inline-flex',
+    flexShrink: 0,
+    width: size,
+    height: size,
+    lineHeight: 0,
+    ...style,
+  };
+
+  // Paths passed as JSX children.
+  if (children) {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox={viewBox}
+        width={size}
+        height={size}
+        fill="none"
+        aria-hidden={name ? undefined : 'true'}
+        role={name ? 'img' : undefined}
+        {...rest}
+        style={box}
+      >
+        {name && <title>{name}</title>}
+        {children}
+      </svg>
+    );
+  }
+
+  // Raw markup lifted straight out of the .svg file.
   return (
     <span
       aria-hidden="true"
       {...rest}
-      style={{
-        display: 'inline-block',
-        flexShrink: 0,
-        width: size,
-        height: size,
-        backgroundColor: 'currentColor',
-        WebkitMaskImage: `url(${url})`,
-        maskImage: `url(${url})`,
-        WebkitMaskSize: 'contain',
-        maskSize: 'contain',
-        WebkitMaskRepeat: 'no-repeat',
-        maskRepeat: 'no-repeat',
-        WebkitMaskPosition: 'center',
-        maskPosition: 'center',
-        ...style,
+      style={box}
+      dangerouslySetInnerHTML={{
+        __html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewBox}" width="${size}" height="${size}" fill="none">${markup || ''}</svg>`,
       }}
     />
   );

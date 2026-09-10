@@ -12,7 +12,7 @@ Everything in this project was read from the repository the user attached:
 
 - **GitHub:** https://github.com/eduplexmkt/mkt-design-system (branch `main`) — a fork of `wanteddev/montage-web` (MIT), now being rebranded under `@eduplexmkt/*`. Read in this build:
   - `packages/wds-theme/src/theme/**` and `packages/eduplex-theme/src/theme/**` — atomic palettes, semantic light/dark tokens, spacing, opacity, breakpoints, z-index, elevation (the two are byte-identical)
-  - `packages/wds/src/components/**/style.ts` + `types.ts` — component geometry for button, chip, content-badge, text-field, search-field, select, checkbox, switch, segmented-control, tab, top-navigation, bottom-navigation, card, avatar, divider, section-message, toast, tooltip, skeleton, typography, with-interaction
+  - `packages/wds/src/components/**/style.ts` + `types.ts` — component geometry for button, chip, content-badge, text-field, search-field, select, checkbox, switch, segmented-control, tab, top-navigation, bottom-navigation, card, avatar, divider, section-message, toast, tooltip, skeleton, typography, section-header, flex-box, grid, grid-item, with-interaction
   - `packages/wds-icon/src/icon-*.tsx` — 25 icon path sets extracted into `assets/icons/`
   - `docs/src/features/layout/**`, `docs/src/app/(with-lnb)/layout.tsx`, `docs/src/features/docs/components/lnb/style.ts` — the documentation site's layout
   - `README.md`, `AGENTS.md`, `.claude/references/architecture.md` — product and architecture context
@@ -44,9 +44,9 @@ There is exactly one product surface in the repository — the `docs/` Next.js d
 
 ## Component families not yet built
 
-Families that exist in `packages/wds/src/components/index.ts` but have no counterpart in this project: accordion, action-area, alert, animation-presence, autocomplete, avatar-button, avatar-group, card-list, category, check-mark, date-calendar, date-picker, date-range-calendar, date-range-picker, dismissable-layer, fallback-view, filter-button, flex-box, focus-scope, form, grid, grid-item, label, list, loading, menu, modal, no-ssr, page-counter, pagination, pagination-dots, picker-action-area, play-badge, popover, popper, portal, progress-indicator, progress-step-indicator, progress-tracker, push-badge, region-config, remove-scroll, round-checkbox, scroll-area, section-header, select-multiple, slider, snackbar, stepper, table, text-area, thumbnail, time-picker, time-view, toggle-icon, with-interaction.
+Families that exist in `packages/wds/src/components/index.ts` but have no counterpart in this project: accordion, action-area, alert, animation-presence, autocomplete, avatar-button, avatar-group, card-list, category, check-mark, date-calendar, date-picker, date-range-calendar, date-range-picker, dismissable-layer, fallback-view, filter-button, focus-scope, list, loading, menu, modal, no-ssr, page-counter, pagination, pagination-dots, picker-action-area, play-badge, popover, popper, portal, progress-indicator, progress-step-indicator, progress-tracker, push-badge, region-config, remove-scroll, round-checkbox, scroll-area, select-multiple, snackbar, table, thumbnail, time-picker, time-view, toggle-icon, with-interaction.
 
-The 23 built here are the ones the docs UI kit actually composes.
+The 28 built here are the ones the docs UI kit actually composes, plus the form family — text-area, form, label, slider and stepper — added afterwards from the same style sources.
 
 
 ## Local deviations from the source

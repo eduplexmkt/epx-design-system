@@ -72,8 +72,8 @@
         "message": "<Button> color must be one of 'primary' | 'assistive'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:platform|width|src|alt|ratio|title|caption|overlay|badges|footer|onClick|key|ref|className|style|children)$/]",
-        "message": "<Card> doesn't accept that prop. Declared props: platform, width, src, alt, ratio, title, caption, overlay, badges, footer, onClick."
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:platform|width|src|alt|ratio|title|caption|overlay|overlayAction|badges|footer|onClick|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: platform, width, src, alt, ratio, title, caption, overlay, overlayAction, badges, footer, onClick."
       },
       {
         "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute[name.name='platform'] > Literal[value!=/^(?:desktop|mobile)$/]",
@@ -128,16 +128,16 @@
         "message": "<Icon> doesn't accept that prop. Declared props: name, size, src, style."
       },
       {
-        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute > JSXIdentifier[name!=/^(?:size|color|disabled|children|onClick|key|ref|className|style|children)$/]",
-        "message": "<IconButton> doesn't accept that prop. Declared props: size, color, disabled, children, onClick."
+        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|size|color|interactionColor|alternative|disabled|disableInteraction|children|onClick|key|ref|className|style|children)$/]",
+        "message": "<IconButton> doesn't accept that prop. Declared props: variant, size, color, interactionColor, alternative, disabled, disableInteraction, children, onClick."
       },
       {
-        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:xsmall|small|medium|large)$/]",
-        "message": "<IconButton> size must be one of 'xsmall' | 'small' | 'medium' | 'large'."
+        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:normal|background|outlined|solid)$/]",
+        "message": "<IconButton> variant must be one of 'normal' | 'background' | 'outlined' | 'solid'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='color'] > Literal[value!=/^(?:normal|assistive|primary)$/]",
-        "message": "<IconButton> color must be one of 'normal' | 'assistive' | 'primary'."
+        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:medium|small)$/]",
+        "message": "<IconButton> size must be a number, or one of 'medium' | 'small'."
       },
       {
         "selector": "JSXOpeningElement[name.name='RadioOption'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|label|disabled|key|ref|className|style|children)$/]",
@@ -200,8 +200,8 @@
         "message": "<TextButton> color must be one of 'primary' | 'assistive'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='TextField'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|defaultValue|placeholder|invalid|disabled|readOnly|width|leadingContent|trailingContent|trailingButton|onChange|key|ref|className|style|children)$/]",
-        "message": "<TextField> doesn't accept that prop. Declared props: value, defaultValue, placeholder, invalid, disabled, readOnly, width, leadingContent, trailingContent, trailingButton, onChange."
+        "selector": "JSXOpeningElement[name.name='TextField'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|defaultValue|placeholder|invalid|disabled|readOnly|width|height|leadingContent|trailingContent|trailingButton|trailingButtonVariant|onChange|key|ref|className|style|children)$/]",
+        "message": "<TextField> doesn't accept that prop. Declared props: value, defaultValue, placeholder, invalid, disabled, readOnly, width, height, leadingContent, trailingContent, trailingButton, trailingButtonVariant, onChange."
       },
       {
         "selector": "JSXOpeningElement[name.name='Toast'] > JSXAttribute > JSXIdentifier[name!=/^(?:icon|children|action|key|ref|className|style|children)$/]",

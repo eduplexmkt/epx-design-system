@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components" viewport="700x300" name="Selection & input" subtitle="TextField, SearchField, Select, Checkbox, Radio, Switch, SegmentedControl" -->
+<!-- @dsCard group="Components" viewport="700x620" name="Selection & input" subtitle="TextField, TextArea, SearchField, Select, Checkbox, Radio, Switch, SegmentedControl, Form, Slider, Stepper" -->
 <!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8"><title>Selection & input</title><link rel="stylesheet" href="../../styles.css">
 <script>window.__WDS_ICON_BASE__='../../assets/icons'</script>
@@ -8,11 +8,12 @@
 <script src="../../_ds_bundle.js"></script>
 <style>body{margin:0;padding:20px;background:var(--semantic-background-normal-normal)}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:14px}.lbl{font-size:11px;line-height:14px;letter-spacing:.0311em;font-weight:500;color:var(--semantic-label-assistive)}</style></head><body><div id="root"></div>
 <script type="text/babel">
-const { TextField, SearchField, Select, Checkbox, RadioGroup, Switch, SegmentedControl, Icon } = window.MontageDesignSystem_4afdc8;
+const { TextField, TextArea, TextAreaContent, SearchField, Select, Checkbox, RadioGroup, Switch, SegmentedControl, Label, FormField, FormLabel, FormControl, FormMessage, FormErrorMessage, Stepper, StepperItem, Slider, Icon } = window.MontageDesignSystem_4afdc8;
 function Demo(){
   const [seg,setSeg]=React.useState('reco');
   const [radio,setRadio]=React.useState('all');
   const [on,setOn]=React.useState(true);
+  const [range,setRange]=React.useState([3,9]);
   return (
     <div className="col">
       <div className="row">
@@ -35,6 +36,41 @@ function Demo(){
       <div className="row" style={{gap:12}}>
         <div style={{width:300}}><SegmentedControl value={seg} onChange={setSeg} items={[{value:'reco',label:'추천'},{value:'new',label:'최신'},{value:'near',label:'가까운'}]} /></div>
         <div style={{width:220}}><SegmentedControl size="small" variant="outlined" value={seg} onChange={setSeg} items={[{value:'reco',label:'추천'},{value:'new',label:'최신'}]} /></div>
+      </div>
+      <div className="row" style={{alignItems:'flex-start',gap:16}}>
+        <TextArea width={300} minRows={2} placeholder="상담 요청 내용을 입력해 주세요" trailingContent={<TextAreaContent>200</TextAreaContent>} />
+        <TextArea width={220} minRows={2} invalid defaultValue="내용이 너무 짧습니다" />
+      </div>
+      <div className="row" style={{alignItems:'flex-start',gap:24}}>
+        <FormField>
+          <FormLabel required>보호자 연락처</FormLabel>
+          <FormControl><TextField placeholder="010-0000-0000" width={240} /></FormControl>
+          <FormMessage>상담 일정 안내를 보내드립니다</FormMessage>
+        </FormField>
+        <FormField>
+          <FormLabel required>이메일</FormLabel>
+          <FormControl><TextField defaultValue="wrong@" invalid width={200} /></FormControl>
+          <FormErrorMessage>올바른 이메일 주소를 입력해 주세요</FormErrorMessage>
+        </FormField>
+        <div className="col" style={{gap:6}}>
+          <span className="lbl">Label</span>
+          <Label required>학년</Label>
+        </div>
+      </div>
+      <div style={{width:420}}>
+        <Stepper value="info">
+          <StepperItem value="agree" label="약관 동의" completedLabel="동의 완료" />
+          <StepperItem value="info" label="정보 입력" />
+          <StepperItem value="done" label="신청 완료" />
+        </Stepper>
+      </div>
+      <div className="row" style={{gap:32}}>
+        <div style={{width:280}}>
+          <Slider min={1} max={12} value={range} onValueChange={setRange} title={({values})=>`${values[0]}학년 ~ ${values[1]}학년`} label={({value})=>`${value}학년`} />
+        </div>
+        <div style={{width:200}}>
+          <Slider defaultValue={[40]} disabled label={({value})=>`${value}분`} />
+        </div>
       </div>
     </div>
   );

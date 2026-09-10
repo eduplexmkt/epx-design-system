@@ -1,9 +1,11 @@
-Renders one of the 25 Montage icons copied into `assets/icons`, tinted with `currentColor`.
+Wraps one of the 354 icons in `assets/icons/`. **Inline the markup — never link to the file.** A `url(...)` reference (mask or `<img src>`) is a fetch, so it disappears in a standalone HTML file opened from disk or sent as an attachment, and a mask discards color, flattening the eleven `*-color` brand marks into a silhouette.
+
+Find the icon in `assets/icons/index.md`, which lists every name with its Korean description and keywords — search that table instead of guessing a filename. Then read `assets/icons/<name>.svg` and pass whatever sits between `<svg …>` and `</svg>`:
 
 ```jsx
-<Icon name="chevron-right" size={20} />
+<Icon size={20} markup={`<path fill-rule="evenodd" clip-rule="evenodd" d="M11.99 2.1C9.77…" fill="currentColor"/>`} />
 ```
 
-Set `window.__WDS_ICON_BASE__` once per page to the relative path of `assets/icons` (cards inside `components/<group>/` use `'../../assets/icons'`). Sizes follow the host component: 24 for icon-only large buttons, 20 for large button leading icons, 18 medium, 16 small, 14 chips/badges, 12 xsmall chips.
+Monochrome icons are all `fill="currentColor"`, so the parent's `color` tints them; the `*-color` icons carry their own fills and ignore it. Sizes follow the host component: 24 for icon-only large buttons, 20 for large button leading icons, 18 medium, 16 small, 14 chips and badges, 12 xsmall chips. In plain HTML, skip the component and paste the whole `<svg>` element into the markup.
 
-Intentional addition: the upstream library ships one React component per icon (`@wanteddev/wds-icon`); this wrapper is the browser-friendly equivalent.
+Intentional addition: the upstream library ships one React component per icon (`@eduplexmkt/mkt-icon`); this wrapper is the browser-friendly equivalent.

@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components" viewport="700x300" name="Feedback" subtitle="SectionMessage, Toast, Tooltip" -->
+<!-- @dsCard group="Components" viewport="700x660" name="Feedback" subtitle="SectionMessage, Toast, Tooltip, ProgressIndicator, ProgressStepIndicator, Modal" -->
 <!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8"><title>Feedback</title><link rel="stylesheet" href="../../styles.css">
 <script>window.__WDS_ICON_BASE__='../../assets/icons'</script>
@@ -8,7 +8,8 @@
 <script src="../../_ds_bundle.js"></script>
 <style>body{margin:0;padding:20px;background:var(--semantic-background-normal-normal)}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:14px}.lbl{font-size:11px;line-height:14px;letter-spacing:.0311em;font-weight:500;color:var(--semantic-label-assistive)}</style></head><body><div id="root"></div>
 <script type="text/babel">
-const { SectionMessage, Toast, Tooltip, TextButton, Icon } = window.MontageDesignSystem_4afdc8;
+const { SectionMessage, Toast, Tooltip, TextButton, Button, Icon, ProgressIndicator, ProgressStepIndicator, Modal, ModalContentItem, ModalHeading, ModalDescription } = window.MontageDesignSystem_4afdc8;
+const STEPS = [{value:'one'},{value:'two'},{value:'three'},{value:'four'}];
 function Demo(){
   return (
     <div className="col">
@@ -28,6 +29,26 @@ function Demo(){
         <div className="col" style={{gap:10}}>
           <Tooltip>상담 신청시 공부유형검사가 무료입니다.</Tooltip>
           <Tooltip size="small" shortcut="⌘K">검색</Tooltip>
+        </div>
+      </div>
+      <div className="col" style={{gap:10}}>
+        <div className="lbl">PROGRESS INDICATOR · 2px</div>
+        <ProgressIndicator percent={40} />
+        <div className="lbl">PROGRESS STEP INDICATOR · medium 8px / small 4px</div>
+        <ProgressStepIndicator value="two" steps={STEPS} />
+        <ProgressStepIndicator size="small" value="three" steps={STEPS} />
+        <ProgressStepIndicator size="small" divider={false} value="one" steps={STEPS} />
+      </div>
+      <div className="col" style={{gap:10}}>
+        <div className="lbl">MODAL · popup, size small</div>
+        <div style={{position:'relative',height:280,overflow:'hidden',borderRadius:12,transform:'translateZ(0)',backgroundColor:'var(--semantic-background-normal-alternative)',boxShadow:'inset 0 0 0 1px var(--semantic-line-normal-neutral)'}}>
+          <Modal open size="small" style={{position:'absolute',width:'100%',height:'100%'}}
+            actions={<Button size="medium" fullWidth>제출하기</Button>}>
+            <ModalContentItem>
+              <ModalHeading>위클리 플랜을 제출하시겠습니까?</ModalHeading>
+              <ModalDescription>제출 후에는 담당 선생님만 수정할 수 있습니다.</ModalDescription>
+            </ModalContentItem>
+          </Modal>
         </div>
       </div>
     </div>

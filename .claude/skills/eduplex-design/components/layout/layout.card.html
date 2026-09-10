@@ -1,0 +1,53 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Layout" subtitle="FlexBox, Grid, GridItem" -->
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><title>Layout</title><link rel="stylesheet" href="../../styles.css">
+<script>window.__WDS_ICON_BASE__='../../assets/icons'</script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:20px;background:var(--semantic-background-normal-normal)}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:14px}.lbl{font-size:11px;line-height:14px;letter-spacing:.0311em;font-weight:500;color:var(--semantic-label-assistive)}.cell{background:var(--semantic-fill-alternative);box-shadow:inset 0 0 0 1px var(--semantic-line-normal-neutral);border-radius:8px;padding:10px;font-size:12px;line-height:16px;letter-spacing:.0252em;color:var(--semantic-label-alternative);text-align:center}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { FlexBox, Grid, GridItem, Typography, SectionHeader, TextButton, Chip, Icon } = window.MontageDesignSystem_4afdc8;
+function Demo(){
+  return (
+    <div className="col">
+      <div className="lbl">FlexBox</div>
+      <FlexBox justifyContent="space-between" alignItems="center" gap={12}>
+        <FlexBox alignItems="center" gap={8}>
+          <Chip active>전체</Chip>
+          <Chip>진학</Chip>
+          <Chip>내신</Chip>
+        </FlexBox>
+        <TextButton size="small" trailingContent={<Icon name="chevron-right" size={16} />}>전체보기</TextButton>
+      </FlexBox>
+
+      <div className="lbl">Grid · spacing 20</div>
+      <Grid spacing={20}>
+        <GridItem columns={8}><div className="cell">columns 8</div></GridItem>
+        <GridItem columns={4}><div className="cell">columns 4</div></GridItem>
+        <GridItem columns={3}><div className="cell">3</div></GridItem>
+        <GridItem columns={3}><div className="cell">3</div></GridItem>
+        <GridItem columns={3}><div className="cell">3</div></GridItem>
+        <GridItem columns={3}><div className="cell">3</div></GridItem>
+      </Grid>
+
+      <div className="lbl">GridItem · auto / offset</div>
+      <Grid spacing={12}>
+        <GridItem columns="auto"><div className="cell">auto</div></GridItem>
+        <GridItem columns={true}><div className="cell">true — 남는 공간</div></GridItem>
+        <GridItem columns={2.4} offset="auto"><div className="cell">2.4 · offset auto</div></GridItem>
+      </Grid>
+
+      <div className="lbl">Typography · SectionHeader</div>
+      <FlexBox flexDirection="column" gap={4}>
+        <SectionHeader size="small" trailingContent={<TextButton size="small">더보기</TextButton>}>가까운 지점 찾기</SectionHeader>
+        <Typography variant="body2" color="var(--semantic-label-alternative)">전국 200여 개 직영·가맹 학습센터</Typography>
+        <Typography variant="caption1" color="var(--semantic-label-assistive)">2026년 3월 기준</Typography>
+      </FlexBox>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body></html>

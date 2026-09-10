@@ -12,16 +12,16 @@
 /* atomic — neutral (shadow base) */
 --atomic-neutral-5:#0F0F0F;--atomic-neutral-10:#171717;--atomic-neutral-15:#1C1C1C;--atomic-neutral-20:#2A2A2A;--atomic-neutral-22:#303030;--atomic-neutral-30:#474747;--atomic-neutral-40:#5C5C5C;--atomic-neutral-50:#737373;--atomic-neutral-60:#8A8A8A;--atomic-neutral-70:#9B9B9B;--atomic-neutral-80:#B0B0B0;--atomic-neutral-90:#C4C4C4;--atomic-neutral-95:#DCDCDC;--atomic-neutral-99:#F7F7F7;
 /* atomic — status + accent hues */
---atomic-red-40:#E52222;--atomic-red-50:#FF4242;--atomic-red-60:#FF6363;--atomic-red-95:#FEECEC;
---atomic-redOrange-40:#C94A00;--atomic-redOrange-48:#F55A00;--atomic-redOrange-50:#FF5E00;--atomic-redOrange-60:#FF7B2E;
---atomic-orange-39:#D17600;--atomic-orange-50:#FF9200;--atomic-orange-60:#FFA938;--atomic-orange-95:#FEF4E6;
---atomic-lime-37:#429E00;--atomic-lime-50:#58CF04;--atomic-lime-60:#6BE016;
---atomic-green-40:#009632;--atomic-green-50:#00BF40;--atomic-green-60:#1ED45A;--atomic-green-95:#D9FFE6;
---atomic-cyan-40:#0098B2;--atomic-cyan-50:#00BDDE;--atomic-cyan-60:#28D0ED;
---atomic-lightBlue-40:#008DCF;--atomic-lightBlue-50:#00AEFF;--atomic-lightBlue-60:#3DC2FF;
---atomic-violet-45:#5B37ED;--atomic-violet-50:#6541F2;--atomic-violet-60:#7D5EF7;--atomic-violet-70:#9E86FC;
---atomic-purple-40:#AD36E3;--atomic-purple-50:#CB59FF;--atomic-purple-60:#D478FF;
---atomic-pink-46:#E846CD;--atomic-pink-50:#F553DA;--atomic-pink-60:#FA73E3;
+--atomic-red-10:#3B0101;--atomic-red-20:#730303;--atomic-red-30:#B00C0C;--atomic-red-40:#E52222;--atomic-red-50:#FF4242;--atomic-red-60:#FF6363;--atomic-red-70:#FF8C8C;--atomic-red-80:#FFB5B5;--atomic-red-90:#FED5D5;--atomic-red-95:#FEECEC;--atomic-red-99:#FFFAFA;
+--atomic-redOrange-10:#290F00;--atomic-redOrange-20:#592100;--atomic-redOrange-30:#913500;--atomic-redOrange-40:#C94A00;--atomic-redOrange-48:#F55A00;--atomic-redOrange-50:#FF5E00;--atomic-redOrange-60:#FF7B2E;--atomic-redOrange-70:#FF9B61;--atomic-redOrange-80:#FFBD96;--atomic-redOrange-90:#FED9C4;--atomic-redOrange-95:#FEEEE5;--atomic-redOrange-99:#FFFAF7;
+--atomic-orange-10:#361E00;--atomic-orange-20:#663A00;--atomic-orange-30:#9C5800;--atomic-orange-39:#D17600;--atomic-orange-40:#D47800;--atomic-orange-50:#FF9200;--atomic-orange-60:#FFA938;--atomic-orange-70:#FFC06E;--atomic-orange-80:#FFD49C;--atomic-orange-90:#FEE6C6;--atomic-orange-95:#FEF4E6;--atomic-orange-99:#FFFCF7;
+--atomic-lime-10:#112900;--atomic-lime-20:#225200;--atomic-lime-30:#347D00;--atomic-lime-37:#429E00;--atomic-lime-40:#48AD00;--atomic-lime-50:#58CF04;--atomic-lime-60:#6BE016;--atomic-lime-70:#88F03E;--atomic-lime-80:#AEF779;--atomic-lime-90:#CCFCA9;--atomic-lime-95:#E6FFD4;--atomic-lime-99:#F8FFF2;
+--atomic-green-10:#00240C;--atomic-green-20:#004517;--atomic-green-30:#006E25;--atomic-green-40:#009632;--atomic-green-50:#00BF40;--atomic-green-60:#1ED45A;--atomic-green-70:#49E57D;--atomic-green-80:#7DF5A5;--atomic-green-90:#ACFCC7;--atomic-green-95:#D9FFE6;--atomic-green-99:#F2FFF6;
+--atomic-cyan-10:#00252B;--atomic-cyan-20:#004854;--atomic-cyan-30:#006F82;--atomic-cyan-40:#0098B2;--atomic-cyan-50:#00BDDE;--atomic-cyan-60:#28D0ED;--atomic-cyan-70:#57DFF7;--atomic-cyan-80:#8AEDFF;--atomic-cyan-90:#B5F4FF;--atomic-cyan-95:#DEFAFF;--atomic-cyan-99:#F7FEFF;
+--atomic-lightBlue-10:#002130;--atomic-lightBlue-20:#004261;--atomic-lightBlue-30:#006796;--atomic-lightBlue-40:#008DCF;--atomic-lightBlue-50:#00AEFF;--atomic-lightBlue-60:#3DC2FF;--atomic-lightBlue-70:#70D2FF;--atomic-lightBlue-80:#A1E1FF;--atomic-lightBlue-90:#C4ECFE;--atomic-lightBlue-95:#E5F6FE;--atomic-lightBlue-99:#F7FDFF;
+--atomic-violet-10:#11024D;--atomic-violet-20:#23098F;--atomic-violet-30:#3A16C9;--atomic-violet-40:#4F29E5;--atomic-violet-45:#5B37ED;--atomic-violet-50:#6541F2;--atomic-violet-60:#7D5EF7;--atomic-violet-70:#9E86FC;--atomic-violet-80:#C0B0FF;--atomic-violet-90:#DBD3FE;--atomic-violet-95:#F0ECFE;--atomic-violet-99:#FBFAFF;
+--atomic-purple-99:#FEFBFF;--atomic-purple-95:#F9EDFF;--atomic-purple-90:#F2D6FF;--atomic-purple-80:#E9BAFF;--atomic-purple-70:#DE96FF;--atomic-purple-60:#D478FF;--atomic-purple-50:#CB59FF;--atomic-purple-40:#AD36E3;--atomic-purple-30:#861CB8;--atomic-purple-20:#580A7D;--atomic-purple-10:#290247;
+--atomic-pink-10:#3D0133;--atomic-pink-20:#730560;--atomic-pink-30:#A81690;--atomic-pink-40:#D331B8;--atomic-pink-46:#E846CD;--atomic-pink-50:#F553DA;--atomic-pink-60:#FA73E3;--atomic-pink-70:#FF94ED;--atomic-pink-80:#FFB8F3;--atomic-pink-90:#FED3F7;--atomic-pink-95:#FEECFB;--atomic-pink-99:#FFFAFE;
 --atomic-yellow-10:#332F00;--atomic-yellow-20:#665F00;--atomic-yellow-30:#998E00;--atomic-yellow-40:#CCBE00;--atomic-yellow-45:#E6D600;--atomic-yellow-50:#FFF100;--atomic-yellow-55:#FFF21A;--atomic-yellow-60:#FFF44D;--atomic-yellow-65:#FFF566;--atomic-yellow-70:#FFF780;--atomic-yellow-80:#FFF999;--atomic-yellow-90:#FFFCCC;--atomic-yellow-95:#FFFDE6;--atomic-yellow-99:#FFFFF7;
 
 /* opacity scale */
