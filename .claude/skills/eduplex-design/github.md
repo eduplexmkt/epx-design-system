@@ -17,6 +17,12 @@ tree: 384f8ec6cb24 (audited, no upstream import)
 - **Logo.** `eduplex-white.svg` and `eduplex-black.svg` shipped with no fill at all and rendered black — the white one was invisible on a dark ground. Both now carry a `.st0` rule.
 - **Docs.** Corrected the icon count (359 → 355 upstream / 354 here), the accent-hue claim (eight backgrounds, twelve foregrounds), the guidelines card count, and a `thumbnail.html` that does not exist. Added blue.65 and the seven missing coolNeutral steps to their scale cards, noted the primary local deviation on its card, and reconciled `cover-image.card.html` with the ask-first rule in `readme.md`.
 
+- **`Icon` regression, caught downstream and fixed here.** Switching to inline markup dropped `name` resolution, so every `.card.html` and the UI kit — all of which call `<Icon name="…" />` — rendered empty. `assets/icons/icon-markup.js` now inlines the 27 curated glyphs and `Icon` resolves `name` through it, falling back to a dashed placeholder plus a console warning instead of nothing. The registry merges with `Object.assign` and loads after `_ds_bundle.js`, so a stale copy compiled into the bundle cannot overwrite it. `window.__WDS_ICON_BASE__` is gone.
+- **`Form.jsx`** exported only the five parts, with no `Form` matching the filename; some bundlers reject that. Added a plain `<form>` wrapper.
+- **`standalone.src.html`** declared nine `ext-resource-dependency` fetches for icon SVGs that nothing loads any more. Removed; the logo declaration stays because a real `<img>` uses it.
+- **`SearchField` follow-through.** The magnifier is built in now, so `leadingContent={<Icon name="search" …>}` was removed from the two cards, the UI kit, and the `TopNavigation` example.
+- **`source-provenance.md`** still said 25 icons from `wds-icon`. Corrected to 354 of 355 from `eduplex-icon`, with the `logo-instagram-color` omission noted.
+
 ### Note on `primary.strong` / `primary.heavy`
 
 The 2026-09-09 entry below records the upstream values `#004C96` / `#004386`. This project deliberately runs one step darker — `#004386` / `#003264` — and `tokens/colors.css` holds those. The deviation is intentional and documented in `guidelines/source-provenance.md`; the log line below describes upstream, not this project.

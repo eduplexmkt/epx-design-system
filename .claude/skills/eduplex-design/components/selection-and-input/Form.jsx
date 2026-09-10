@@ -123,3 +123,14 @@ export function FormErrorMessage({ children, style, ...rest }) {
     </p>
   );
 }
+
+/** Plain <form> wrapper. The system has no styled form element — the visual
+ * rules live in FormField and its parts — but a file-level `Form` export keeps
+ * the component name and the filename in step, which some bundlers require. */
+export function Form({ children, style, ...rest }) {
+  return (
+    <form {...rest} style={style}>
+      {children}
+    </form>
+  );
+}

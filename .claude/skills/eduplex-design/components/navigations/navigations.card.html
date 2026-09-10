@@ -1,11 +1,11 @@
 <!-- @dsCard group="Components" viewport="700x330" name="Navigation" subtitle="TopNavigation, Tab, BottomNavigation" -->
 <!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8"><title>Navigation</title><link rel="stylesheet" href="../../styles.css">
-<script>window.__WDS_ICON_BASE__='../../assets/icons'</script>
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 <script src="../../_ds_bundle.js"></script>
+<script src="../../assets/icons/icon-markup.js"></script>
 <style>body{margin:0;padding:20px;background:var(--semantic-background-normal-normal)}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:14px}.lbl{font-size:11px;line-height:14px;letter-spacing:.0311em;font-weight:500;color:var(--semantic-label-assistive)}</style></head><body><div id="root"></div>
 <script type="text/babel">
 const { TopNavigation, Tab, BottomNavigation, SearchField, IconButton, Icon } = window.MontageDesignSystem_4afdc8;
@@ -24,7 +24,7 @@ function Demo(){
         <TopNavigation variant="display" title="매니저 채용" rightContent={<IconButton aria-label="설정"><Icon name="setting" size={20} /></IconButton>} />
       </div>
       <div style={frame}>
-        <TopNavigation variant="search" title={<SearchField leadingContent={<Icon name="search" size={20} />} placeholder="검색" width="100%" />}
+        <TopNavigation variant="search" title={<SearchField />} placeholder="검색" width="100%" />}
           leftContent={<IconButton aria-label="뒤로"><Icon name="chevron-left" size={20} /></IconButton>} />
       </div>
       <Tab value={tab} onChange={setTab} items={[{value:'all',label:'전체'},{value:'dev',label:'학습하기'},{value:'design',label:'나의스크랩'},{value:'pm',label:'교육이력'}]} />

@@ -13,7 +13,7 @@ Everything in this project was read from the repository the user attached:
 - **GitHub:** https://github.com/eduplexmkt/mkt-design-system (branch `main`) — a fork of `wanteddev/montage-web` (MIT), now being rebranded under `@eduplexmkt/*`. Read in this build:
   - `packages/wds-theme/src/theme/**` and `packages/eduplex-theme/src/theme/**` — atomic palettes, semantic light/dark tokens, spacing, opacity, breakpoints, z-index, elevation (the two are byte-identical)
   - `packages/wds/src/components/**/style.ts` + `types.ts` — component geometry for button, chip, content-badge, text-field, search-field, select, checkbox, switch, segmented-control, tab, top-navigation, bottom-navigation, card, avatar, divider, section-message, toast, tooltip, skeleton, typography, section-header, flex-box, grid, grid-item, with-interaction
-  - `packages/wds-icon/src/icon-*.tsx` — 25 icon path sets extracted into `assets/icons/`
+  - `packages/eduplex-icon/src/icon-*.tsx` — 354 of the 355 icon path sets extracted into `assets/icons/`, with `assets/icons/index.md` as the name / Korean description / keyword table. `logo-instagram-color` is the one omission: it embeds a raster image through a pattern and does not convert cleanly. The 27 curated glyphs the cards and UI kit use are also inlined in `assets/icons/icon-markup.js` so a card draws without a fetch.
   - `docs/src/features/layout/**`, `docs/src/app/(with-lnb)/layout.tsx`, `docs/src/features/docs/components/lnb/style.ts` — the documentation site's layout
   - `README.md`, `AGENTS.md`, `.claude/references/architecture.md` — product and architecture context
 - **Docs site:** https://montage.wanted.co.kr (not fetched; referenced by the repo README)
